@@ -16,7 +16,7 @@ namespace streebo.METIS.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["isLogin"] = 0;
-            // testing chekc in
+            // testing chekc in this is should update
         }
 
         public int Validate_Login(String Username, String Password)
