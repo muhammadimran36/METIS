@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B100F0A4-8471-48B9-A56A-6599AB64CB41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>streebo.METIS.UI</RootNamespace>
+    <AssemblyName>streebo.METIS.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2012.1.215.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.1.215.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppWindow.aspx" />
+    <Content Include="App_Data\TelerikVSX.mdf">
+    </Content>
+    <Content Include="App_Data\TelerikVSX_log.ldf">
+      <DependentUpon>TelerikVSX.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assignments.aspx" />
+    <Content Include="ComboInGrid1.aspx" />
+    <Content Include="RFS.aspx" />
+    <Content Include="IMPractice.aspx" />
+    <Content Include="LoadOnDemandServerSide.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PortalPractise.aspx" />
+    <Content Include="Practices.aspx" />
+    <Content Include="ProjectSum.aspx" />
+    <Content Include="Project_Creation.aspx" />
+    <Content Include="ResSum.aspx" />
+    <Content Include="DetailsCS.ascx" />
+    <Content Include="UpComingProj.aspx" />
+    <Content Include="Versions.aspx" />
+    <None Include="Web References\KMDMAPI\ApplicationService.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppWindow.aspx.cs">
+      <DependentUpon>AppWindow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppWindow.aspx.designer.cs">
+      <DependentUpon>AppWindow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments.aspx.cs">
+      <DependentUpon>Assignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments.aspx.designer.cs">
+      <DependentUpon>Assignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComboInGrid1.aspx.cs">
+      <DependentUpon>ComboInGrid1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComboInGrid1.aspx.designer.cs">
+      <DependentUpon>ComboInGrid1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RFS.aspx.cs">
+      <DependentUpon>RFS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RFS.aspx.designer.cs">
+      <DependentUpon>RFS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMPractice.aspx.cs">
+      <DependentUpon>IMPractice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMPractice.aspx.designer.cs">
+      <DependentUpon>IMPractice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadOnDemandServerSide.aspx.cs">
+      <DependentUpon>LoadOnDemandServerSide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadOnDemandServerSide.aspx.designer.cs">
+      <DependentUpon>LoadOnDemandServerSide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalPractise.aspx.cs">
+      <DependentUpon>PortalPractise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalPractise.aspx.designer.cs">
+      <DependentUpon>PortalPractise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Practices.aspx.cs">
+      <DependentUpon>Practices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Practices.aspx.designer.cs">
+      <DependentUpon>Practices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSum.aspx.cs">
+      <DependentUpon>ProjectSum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectSum.aspx.designer.cs">
+      <DependentUpon>ProjectSum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project_Creation.aspx.cs">
+      <DependentUpon>Project_Creation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project_Creation.aspx.designer.cs">
+      <DependentUpon>Project_Creation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ResSum.aspx.cs">
+      <DependentUpon>ResSum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResSum.aspx.designer.cs">
+      <DependentUpon>ResSum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsCS.ascx.cs">
+      <DependentUpon>DetailsCS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailsCS.ascx.designer.cs">
+      <DependentUpon>DetailsCS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpComingProj.aspx.cs">
+      <DependentUpon>UpComingProj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpComingProj.aspx.designer.cs">
+      <DependentUpon>UpComingProj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Versions.aspx.cs">
+      <DependentUpon>Versions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Versions.aspx.designer.cs">
+      <DependentUpon>Versions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\KMDMAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.0.100.24:8089/MDMApi/ApplicationService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\KMDMAPI\</RelPath>
+      <UpdateFromURL>http://10.0.100.24:8089/MDMApi/ApplicationService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>streebo_METIS_UI_KMDMAPI_ApplicationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\KMDMAPI\ApplicationService.wsdl" />
+    <None Include="Web References\KMDMAPI\BasketCommonFieldsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\BasketSearchResultsBatch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\BasketsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\CatalogResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\CategoryResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ConfigurationOptionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ContextResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\CustomValidationScriptResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DatabaseSearchResultsBatch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwAclResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwCbeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwDimensionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwExportDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwItemListResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwRoleResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwUserGroupResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DiwUserResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\DMMappingDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ExchangeDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ExportDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ExternalSystemInstanceResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\ExternalSystemResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\FeedDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\FileDownloadContents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\HubInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\LeaseInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\LinkTypeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\MappingSpecificationResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\MasterContextSearchResultsBatch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\PartyResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\KMDMAPI\SearchResultsBatch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\Session.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SessionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\StagingTableFeedDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\StringValueResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SubjectRequest.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SubjectResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SubjectsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SubjectTemplateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\SubjectTypeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\TaskHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\TaskInformation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\TaskSubmissionInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\UserExitClassResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\WorkflowDefinitionForWorklistResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\WorkflowDefinitionResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\WorkflowPartyRequirementResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\WorkflowSearchResultsBatch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\KMDMAPI\WorklistResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\streebo.METIS.BLL\streebo.METIS.BLL.csproj">
+      <Project>{5386f611-2387-4ca1-a3cd-2904f3ba478d}</Project>
+      <Name>streebo.METIS.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2509</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

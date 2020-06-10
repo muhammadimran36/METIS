@@ -1,0 +1,135 @@
+﻿body
+{
+}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+{
+margin:0;
+padding:0;
+}
+
+.hidden
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0;
+    padding: 15px;
+}
+
+.hidden
+{
+    display:none;
+    height:30px;
+}
+.clear10
+{
+    clear:both;
+    height: 10px;
+}
+.showhidden
+{
+font-size: 12px;
+color:#1f364e;
+text-decoration:none;
+background-repeat:no-repeat;
+background-position:left center;
+height: 20px;
+display:inline-block;
+vertical-align:middle;
+padding-left: 25px;
+
+}
+.on
+{
+font-size: 12px;
+color:#1f364e;
+text-decoration:none;
+background-repeat:no-repeat;
+background-position:left center;
+height: 20px;
+display:inline-block;
+vertical-align:middle;
+padding-left: 25px;
+}
+.panel
+{
+   
+    min-height:1px;    
+    padding:10px;
+    
+    
+}
+.label
+{
+    width: 100px;    
+    float:left;
+    font-size:13px;
+    text-align:right;
+    padding-right:8px;
+
+}
+.linkButton
+{
+    width: 100px;    
+    
+    color:Gray;
+    font-size:13px;
+    text-align:right;
+    padding-right:8px;
+
+}
+.CMB_assignment
+{
+	width:280px!important;
+}
+.CMB
+{
+	width:150px!important;
+}
+.CMB_search
+{
+	width:450px!important;
+}
+div.field
+{
+    width: 295px;
+    float:left;
+    padding: 0px;    
+    min-height: 27px;
+    margin-bottom: 1px;
+}
+div.field_search
+{
+    width: 595px;
+    float:left;
+    padding: 0px;    
+    min-height: 27px;
+    margin-bottom: 1px;
+}
+div.field_assignment
+{
+    width: 400px;
+    float:left;
+    padding: 0px;    
+    min-height: 27px;
+    margin-bottom: 1px;
+}
+.GridDropDown
+{
+width:180px;    }
+
+.scroll
+{
+    overflow:scroll;
+    width:400px;
+}
+
+.empInfo
+{
+font-size:12px !important;
+}

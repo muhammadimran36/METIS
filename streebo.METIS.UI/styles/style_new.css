@@ -1,0 +1,730 @@
+﻿/* @charset "utf-8";
+/* CSS Document */
+
+
+
+/*	Revenue Forecase System  - A product of Streebo
+	http://www.streebo.com
+	Author: Syed Shan-e-Hussain Naqvi
+	Verison: 1.0 
+*/
+
+
+/* Table of Contents */
+
+/* 1	Reset
+/* 2	Footer Pushing
+/* 3	Footer Styles
+/* 4	Header Styles
+/* 5	Media Queries
+/* 6	Navigation Styles
+/* 6	Grid Styles Styles
+/* 7	Form Styles Styles
+
+
+
+
+/******************************************************************** 1 Reset *******************************************************************************************
+/* Start of reset CSS */
+
+/* Credit: http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   
+   /*
+	The goal of a reset stylesheet is to reduce browser inconsistencies 
+	in things like default line heights, margins and font sizes of headings, 
+	and so on. It can be removed, if not required.
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of reset CSS */
+
+
+
+/******************************************************************** 1 Reset *******************************************************************************************
+
+
+
+
+/******************************************************************** 2 Get Down *****************************************************************************************
+
+/* Footer PushingCss System */
+
+/*
+	The goal of the Footer Pushing css system is to put the footer at the bottom of the page even for small or blank pages.
+*/
+
+/* Start of Footer Pushing CSS*/
+html,
+	body {
+		margin:0;
+		padding:0;
+		height:100%;
+		font-family:arial;
+	}
+	#wrapper {
+		min-height:100%;		
+		position:relative;
+	}
+	#header {
+		border-top: 7px solid #207db1;
+		border-bottom: 2px solid #c7c7c7;		
+		min-height: 85px;
+		background:#eeeeee;
+	}
+	#body {
+		padding:10px;
+		padding-bottom:45px;	/* Height of the footer */
+	}
+	#footer {
+		position:relative;
+		bottom:0;
+		width:100%;
+		height:45px;			/* Height of the footer */
+		border-top: 2px solid #434343;
+		background: #207db1;
+	}
+	
+/* End of Footer Pushing CSS*/
+
+
+/******************************************************************** 2 Get Down *****************************************************************************************
+
+
+/******************************************************************** 3 Footer Styles ************************************************************************************
+
+/* Footer Styles*/
+.copyright
+{
+	
+	float:left;
+	padding-left:20px;
+	vertical-align:middle;
+	height:45px;
+	line-height:45px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ffffff;
+}
+
+.streebo
+{
+	width:170px;
+	height:45px;
+	background:url(../images/streebo.png) no-repeat center;	
+	float:right;
+}
+/* Footer Styles*/
+
+/******************************************************************** 3 Footer Styles ************************************************************************************
+
+
+/******************************************************************** 4 Header Styles ************************************************************************************
+
+/* Header menu and logo */
+#mainmenu { display: block; }
+#secmenu{ display: none; }
+
+
+.logo
+{
+	width:200px;
+	height:85px;
+	background:url(../images/rfs_logo.gif) no-repeat center;	
+	float:left;
+}
+
+
+
+/******************************************************************** 5 Media Queries ************************************************************************************
+/* Media Queries*/
+
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	#mainmenu { display: block; }
+	#secmenu{ display: none; }
+}
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	#mainmenu { display: none; }
+	#secmenu{ display: block; }
+}
+/* for 480px or less */
+@media screen and (max-width: 600px) {
+	#mainmenu { display: none; }
+	#secmenu{ display: block; }
+	
+}
+
+@media screen and (max-width: 500px) {
+	#mainmenu { display: none; }
+	#secmenu{ display: block; }
+	
+	.logo{
+	width:100px;
+	height:85px;
+	background:url(../images/rfs_logo_small.gif) no-repeat center;	
+	float:left;}
+}
+
+
+/******************************************************************** 5 Media Queries ************************************************************************************
+
+
+
+/******************************************************************** 6 Navigation Styles ************************************************************************************
+/* Navigation Styles */
+
+.navigation
+{
+	float:right;
+	margin-right: 20px;
+}
+.dashboard, .dashboard:hover
+{
+	background-image:url(../images/nav_dashboard.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:0px !important;
+	padding-left:35px !important;
+}
+
+.revenue, .revenue:hover
+{
+	background-image:url(../images/nav_revenue.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+.customers, .customers:hover
+{
+	background-image:url(../images/nav_customers.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+.projects, .projects:hover
+{
+	background-image:url(../images/nav_projects.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+.Training, .Training:hover
+{
+	background-image:url(../images/nav_Training.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+.Target_Actual, .Target_Actual:hover
+{
+	background-image:url(../images/nav_target.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+.settings, .settings:hover
+{
+	background-image:url(../images/nav_settings.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:10px !important;
+	padding-left:30px !important;
+}
+	.profile
+{
+	padding: 5px;
+}
+.profile span
+{
+	float:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color: #565656;
+	text-decoration: none;
+}
+.profile span a
+{
+	float:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight: normal;
+	color: #565656;
+	padding-left:2px;
+	text-decoration: none;
+}
+
+.profile span a:hover
+{
+	text-decoration:underline;
+}
+
+/* Navigation Styles */
+/******************************************************************** 6 Navigation Styles ************************************************************************************
+
+
+/******************************************************************** 7 a Grid Styles ************************************************************************************
+
+/* Grid Styles*/
+
+.rfsGrid { width: 100%; background-color: #fff; margin: auto; border:none; border-collapse:collapse; text-align:left; font-family:arial; font-size:11px; }
+.rfsGrid td { padding: 5px 5px; border: none; color: #353535; }
+.rfsGrid tbody tr { border-bottom: 1px solid #d9d9d9;}
+.rfsGrid tbody tr:hover { border-bottom: 1px solid #d9d9d9; background-color:#eeeeee;}
+.rfsGrid td.major { font-weight:bold; font-size:12px;}
+.rfsGrid td.emptyGrid { padding: 5px; border: none; color: #353535; }
+.rfsGrid th  { padding: 10px 5px ; background: #029aee url("../images/rfsgrid_head.jpg") repeat-x bottom; border:none; font-size: 12px; font-family:arial; font-weight:bold; color: #ffffff; height:23px }
+.rfsGrid .pgr td { border-width: 0; padding: 0 0px; border-left: none; font-weight: bold; color: #279dde; font-size:12px; }   
+.rfsGrid .pgr a, .rfsGrid2 .pgr a  { color: #279dde; text-decoration: none;  font-weight: normal; }
+.rfsGrid .pgr a:hover, .rfsGrid2 .pgr a:hover  { color: #279dde; text-decoration: underline; font-weight: normal; }
+.rfsGrid tfoot {padding: 15px; height:35px; vertical-align:middle;line-height:35px; }
+
+
+/* Grid Styles*/
+/******************************************************************** 7 a Grid Styles ************************************************************************************
+
+/******************************************************************** 7 b Grid Styles ************************************************************************************
+
+/* Grid Styles*/
+
+.rfsChildGrid { width: 100%; background-color: #fff; margin: auto; border:none; border-collapse:collapse; text-align:left; font-family:arial; font-size:11px; }
+.rfsChildGrid td { padding: 5px 5px; border: none; color: #353535; }
+.rfsChildGrid tbody tr { border-bottom: 1px solid #d9d9d9;}
+.rfsChildGrid tbody tr:hover { border-bottom: 1px solid #d9d9d9; background-color:#eeeeee;}
+.rfsChildGrid td.major { font-weight:bold; font-size:12px;}
+.rfsChildGrid td.emptyGrid { padding: 5px; border: none; color: #353535; }
+/*.rfsChildGrid th  { padding: 10px 5px ; background: #029aee url("../images/rfsgrid_head.jpg") repeat-x bottom; border:none; font-size: 12px; font-family:arial; font-weight:bold; color: #ffffff; height:23px }*/
+.rfsChildGrid th  
+{ 
+   font-size: 12px; font-family:arial; font-weight:bold; color:black; height:23px;
+}
+.rfsChildGrid .pgr td { border-width: 0; padding: 0 0px; border-left: none; font-weight: bold; color: #279dde; font-size:12px; }   
+.rfsChildGrid .pgr a, .rfsGrid2 .pgr a  { color: #279dde; text-decoration: none;  font-weight: normal; }
+.rfsChildGrid .pgr a:hover, .rfsGrid2 .pgr a:hover  { color: #279dde; text-decoration: underline; font-weight: normal; }
+.rfsChildGrid tfoot {padding: 15px; height:35px; vertical-align:middle;line-height:35px; }
+
+
+/* Grid Styles*/
+/******************************************************************** 7 b Grid Styles ************************************************************************************
+
+/******************************************************************** 8 Form Syyles ************************************************************************************
+
+/* Form Styles*/
+.filter
+{
+	width: 100%;
+}
+.field
+{
+	width: 300px;
+	float: left;
+	padding:5px;
+	height: 30px;
+}
+.field span.label
+{
+	float:left;
+	width: auto;
+	padding-right:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#207db1;
+	padding-top:5px;	
+}
+input.calendar[type=button], input.calendar[type=submit], input.calendar[type=reset]
+{
+	background:url(../images/calendar.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.stage1[type=button], input.stage1[type=submit], input.stage1[type=reset]
+{
+	background:#b7b113;
+	border:none;
+	cursor:pointer;
+}
+
+input.stage2[type=button], input.stage2[type=submit], input.stage2[type=reset]
+{
+	background:#b16820;
+	border:none;
+	cursor:pointer;
+}
+input.stage3[type=button], input.stage3[type=submit], input.stage3[type=reset]
+{
+	background:#b1204c;
+	border:none;
+	cursor:pointer;
+}
+input.stage4[type=button], input.stage4[type=submit], input.stage4[type=reset]
+{
+	background:#207db1;
+	border:none;
+	cursor:pointer;
+}
+input.stage5[type=button], input.stage5[type=submit], input.stage5[type=reset]
+{
+	background:#0e8810;
+	border:none;
+	cursor:pointer;
+}
+
+input.dev[type=button], input.dev[type=submit], input.dev[type=reset]
+{
+	background:url(../images/services/development.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.trainning[type=button], input.trainning[type=submit], input.trainning[type=reset]
+{
+	background:url(../images/services/trainning.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+
+input.operations[type=button], input.operations[type=submit], input.operations[type=reset]
+{
+	background: url(../images/services/operations.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.design[type=button], input.design[type=submit], input.design[type=reset]
+{
+	background: url(../images/services/desgin.jpg) no-repeat center;
+	border:none;
+	width: 26px;
+	cursor:pointer;
+}
+input.support[type=button], input.support[type=submit], input.support[type=reset]
+{
+	background: url(../images/services/support.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.copy[type=button], input.copy[type=submit], input.copy[type=reset]
+{
+	background:url(../images/icon_copy.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.edit[type=button], input.edit[type=submit], input.edit[type=reset]
+{
+	background:url(../images/icon_edit.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.delete[type=button], input.delete[type=submit], input.delete[type=reset]
+{
+	background:url(../images/icon_del.jpg) no-repeat center;
+	border:none;
+	cursor:pointer;
+}
+input.pressed[type=button], input.pressed[type=submit], input.pressed[type=reset]
+{
+	border: 2px solid #999999;
+}
+
+
+
+.field input[type=text]
+{
+width: 180px;
+margin-top:0;
+margin-bottom:0;
+color:#333333;
+padding:0;
+background: #ffffff;
+height: 23px;
+border: 1px solid #999999;
+height: 20px;
+padding-top: 3px;
+padding-bottom: 2px;
+}
+.field input.right[type=text]
+{
+width: 180px;
+margin-top:0;
+margin-bottom:0;
+text-align:right;
+background: #ffffff;
+height: 23px;
+border: 1px solid #999999;
+height: 20px;
+padding-top: 3px;
+padding-bottom: 2px;
+}
+.field input[type=password]
+{
+width: 180px;
+margin-top:0;
+margin-bottom:0;
+background: #ffffff;
+color:#333333;
+height: 23px;
+border: 1px solid #999999;
+height: 20px;
+padding-top: 3px;
+padding-bottom: 2px;
+}
+.field input[type=radio]
+{
+margin-top:0;
+margin-bottom:0;
+background: #ffffff;
+border:0;
+vertical-align:middle;
+}
+.field input[type=checkbox]
+{
+margin-top:0;
+margin-bottom:0;
+border:none;
+padding: 3px;
+vertical-align:middle;
+margin-right: 5px;
+}
+.field select
+{
+width: 180px;
+margin:2px 0;
+background: #ffffff;
+color:#333333;
+height: 23px;
+border: 1px solid #999999;
+height: 23px;
+padding-top: 3px;
+padding-bottom: 2px;
+}
+.required
+{
+background-image:url(../images/required-field.png);
+background-position:center right;
+background-repeat:no-repeat;
+padding-right:20px;
+} 
+
+/*Indiviual Styles*/
+
+#lnkAddNew
+{
+   font-size:10.5px;
+    
+} 
+
+#pageSize
+{
+    float:right;
+    font-size:10.5px;
+}
+
+#btnAddRow
+{
+    margin:0 0 0 15px;
+}
+
+#imgAddRow
+{
+    margin:0 0 0 15px;
+}
+#lnkAddRow
+{
+   font-size:10.5px;
+    
+} 
+/*Login Box css*/
+
+.lbl {
+    margin: 0px 0px 0px 40px;
+    font-size: 12px;
+    font-style: normal;
+}
+#block
+{
+    width:426px;
+    padding-top:129px;
+    margin:0 auto;
+    position:relative;
+    }
+#block .logo
+{
+    margin-left:115px;
+}
+.form
+{
+    padding:13px 0 50px 0;
+    margin-top:18px;
+    position:relative;
+    border:1px solid grey;
+}
+.form .login-box
+{
+    background:url(/images/login-box.png) no-repeat;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+	width:93px;
+	padding:14px 0 14px 16px;
+	margin-bottom:11px;
+	position:relative;
+	left:-4px;
+	float:left;
+}
+.form .warning 
+{
+    background:url(/images/warning.png) no-repeat;
+    height:28px;
+    padding:0 0 0 34px;
+    margin:7px 0px 0 113px;
+    position:relative;
+}
+.form .warning p 
+{
+    background:url(/images/warning-p.png) repeat-x left center;
+    color:#c51f00;
+    font-size:11px;
+    height:19px;
+    font-weight:bold;
+    padding:9px 6px 0 0;float:left;
+}
+.form .warning p.c 
+{
+    background:url(/images/warning-p.c.png) no-repeat right center;
+    text-indent:-1000px;
+    padding:0 0 0 0;
+    height:28px;width:2px;
+ }
+.form input 
+{
+    color:#5d5d5d;
+    font-size:12px;
+    font-style:italic;
+    width:322px;height:30px;
+    padding-left:18px;margin:0 0 16px 40px;
+    clear:left;
+}
+.form .btn 
+{
+    float:left;
+}
+.form .btn input
+{
+    text-transform:uppercase;
+    width:111px;border:none; background: #207DB1;
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-style:Normal;
+    font-size: 12px;
+}
+.form .btn input:hover
+{
+    background #207DB1;
+    color: #FFFFFF;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+.form .nav-path-
+{
+    margin-left:162px;
+}
+.form .nav-path li
+{
+    line-height:19px;
+}
+.form .nav-path li a
+{
+    color:#005fa2;
+    font-size:11px;
+}
+.form .nav-path li a:hover
+{
+    text-decoration:none;
+}
+.c 
+{
+    background:url(/images/c.png) no-repeat-x;
+    height:28px;width:2px;
+}
+.c2 
+{
+    background:url(/images/warning.png) no-repeat top left;
+    position:absolute;
+    top:0;
+    left:50px;
+    height:28px;
+    width:2px;
+ }
+.ctop 
+{
+    background:url(/images/ctop.png) no-repeat;
+    width:426px;
+    height:6px;
+    position:absolute;
+    top:-6px;
+    left:0;
+ }
+.cbottom 
+{
+    background:url(/images/cbottom.png) no-repeat;
+    width:426px;
+    height:6px;
+    position:absolute;
+    bottom:-6px;left:0;
+ }
+
+
+/* Form Styles*/
+
+/******************************************************************** 8 Form Styles ************************************************************************************
+
+
+
+
+/*   End of CSS Document */
