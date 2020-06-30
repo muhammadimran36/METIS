@@ -29,7 +29,7 @@
                     <li><a tabindex="0" href="ResSum.aspx">Resource Summary</a></li>
                     <li><a tabindex="1" href="ProjectSum.aspx">Project Summary</a></li>
                     <li class="selected"><a tabindex="2" href="Assignments.aspx">Assignments</a></li>
-                    <li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>
+                    <%--<li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>--%>
                 </ul>
                 <!-- END: Menu -->
                 <!-- START: content -->
@@ -45,6 +45,8 @@
                             <asp:ListItem>Assign Resource To Project</asp:ListItem>
                             <asp:ListItem>Mark Leaves</asp:ListItem>
                             <asp:ListItem>Roles</asp:ListItem>
+                            <asp:ListItem>Add Project</asp:ListItem>
+                            <asp:ListItem>Add Resource</asp:ListItem>
                         </asp:DropDownList>
                         <telerik:RadScriptManager ID="radScriptMgr" runat="server">
                             <Scripts>

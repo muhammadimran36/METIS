@@ -161,6 +161,12 @@ namespace streebo.METIS.UI
                     rgRoles.DataSource = objBLL.getAllUpComingProject();
                     rgRoles.DataBind();
                     break;
+                case "Add Project":
+                   
+                    break;
+                case "Add Resource":
+                   
+                    break;
                 default:
                     break;
             }

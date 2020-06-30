@@ -476,7 +476,7 @@
                     <span class="title" runat="server">
                         <ul class="menu">
                             <li><a tabindex="2" href="Assignments.aspx">Assignments</a></li>
-                            <li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>
+                            <%--<li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>--%>
                             <%--<li id="RFSs" runat="server"><a tabindex="4" href="RFS.aspx">RFS</a></li>--%>
                         </ul>
                     </span>
