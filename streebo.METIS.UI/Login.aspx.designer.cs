@@ -42,15 +42,6 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
 
         /// <summary>
-        /// DropDownListLanguage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListLanguage;
-
-        /// <summary>
         /// LoginImg control.
         /// </summary>
         /// <remarks>

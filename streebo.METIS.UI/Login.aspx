@@ -43,11 +43,7 @@
     <div class="loginContainer">
 	
         <div class="form">
-            Language: <asp:DropDownList ID="DropDownListLanguage" runat="server">
-                <asp:ListItem Value="English" Text="English"></asp:ListItem>
-                <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
-                 <asp:ListItem Value="kyrgyzstan" Text="kyrgyzstan"></asp:ListItem>
-                      </asp:DropDownList>
+         
             <asp:ImageButton ID="LoginImg" runat="server" />
 <%--    	    <img src="<%# HttpContext.GetGlobalResourceObject("ResourceEN", "LoginIMG").ToString() %>" alt="METIS Logo">--%>
    	 	    <form method="post" action="index.html">

@@ -15,9 +15,9 @@ namespace streebo.METIS.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            LoginImg.ImageUrl = "images/metis_login.png";
-                //HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "LoginIMG").ToString();
+            PropertyLayer.ResourceFileNameEN = "ResourceEN";
+            LoginImg.ImageUrl = HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "LoginIMG").ToString();
+            //
             Session["isLogin"] = 0;
             // testing chekc in this is should update
         }
@@ -57,16 +57,9 @@ namespace streebo.METIS.UI
         protected void btnlogin_Click(object sender, EventArgs e)
         {
 
-            string strLang = DropDownListLanguage.SelectedValue;
-            if (strLang == "English")
-                PropertyLayer.ResourceFileNameEN = "ResourceEN";
-            else
-            if (strLang == "Russian")
-                PropertyLayer.ResourceFileNameEN = "ResourceRU";
-            else
-            if (strLang == "kyrgyzstan")
-                PropertyLayer.ResourceFileNameEN = "ResourceKZ";
-
+            
+              
+          
                                  Session["user"] = txtUsername.Text;
             Session["isLogin"] = 1;
             Response.Redirect("ResSum.aspx");

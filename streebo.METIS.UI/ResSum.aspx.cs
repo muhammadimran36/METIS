@@ -66,10 +66,7 @@ namespace streebo.METIS.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblResourceSummary.Text = PropertyLayer.ResourceSummary;
-
-            lblProjectSummary.Text = PropertyLayer.ProjectSummary;
-            lblAssignments.Text = PropertyLayer.Assignments;
+            
 
             //int x = Convert.ToInt32(Session["isLogin"]);
 
@@ -96,6 +93,17 @@ namespace streebo.METIS.UI
 
                 if (!IsPostBack)
                 {
+
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+
+                    lblResourceSummary.Text = PropertyLayer.ResourceSummary;
+
+                    lblProjectSummary.Text = PropertyLayer.ProjectSummary;
+                    lblAssignments.Text = PropertyLayer.Assignments;
+
+
                     Boolean b_CanView = false;
 
                     objBLL = new MetisBLL();
@@ -333,7 +341,22 @@ namespace streebo.METIS.UI
             return username;
         }
 
-        
+
+        protected void DropDownListLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string strLang = DropDownListLanguage.SelectedValue;
+            if (strLang == "English")
+                PropertyLayer.ResourceFileNameEN = "ResourceEN";
+            else
+            if (strLang == "Russian")
+                PropertyLayer.ResourceFileNameEN = "ResourceRU";
+            else
+            if (strLang == "kyrgyzstan")
+                PropertyLayer.ResourceFileNameEN = "ResourceKZ";
+
+            Response.Redirect(Request.RawUrl);
+        }
+
         #region Weekly Master & DetailTable
 
         protected void RadGrid_weekly_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)

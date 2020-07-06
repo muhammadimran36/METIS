@@ -30,6 +30,11 @@ namespace streebo.METIS.UI
 
                 #endregion
 
+                    
+                if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
+                if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
+                if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+
 
 
                 lblResourceSummary.Text = PropertyLayer.ResourceSummary;
@@ -2410,6 +2415,21 @@ namespace streebo.METIS.UI
             while (now.DayOfWeek != DayOfWeek.Saturday)
                 now = now.AddDays(1);
             return now;
+        }
+
+        protected void DropDownListLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string strLang = DropDownListLanguage.SelectedValue;
+            if (strLang == "English")
+                PropertyLayer.ResourceFileNameEN = "ResourceEN";
+            else
+            if (strLang == "Russian")
+                PropertyLayer.ResourceFileNameEN = "ResourceRU";
+            else
+            if (strLang == "kyrgyzstan")
+                PropertyLayer.ResourceFileNameEN = "ResourceKZ";
+
+            Response.Redirect(Request.RawUrl);
         }
     }
 }

@@ -463,7 +463,13 @@
                     <span class="title" runat="server">
                         <%= PrintUserName(Convert.ToString(Session["user"])) %>&nbsp;|&nbsp;</span>&nbsp;<span
                             class="logout"><asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_OnClick"
-                                Font-Size="Smaller" Height="15px">Logout</asp:LinkButton></span>
+                                Font-Size="Smaller" Height="15px">Logout</asp:LinkButton> </span>
+
+                   &nbsp;|&nbsp;  Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
+                <asp:ListItem Value="English" Text="English"></asp:ListItem>
+                <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
+                 <asp:ListItem Value="kyrgyzstan" Text="kyrgyzstan"></asp:ListItem>
+                      </asp:DropDownList>
                 </div>
             </div>
             <!-- END: Header -->

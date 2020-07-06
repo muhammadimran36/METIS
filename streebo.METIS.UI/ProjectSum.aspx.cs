@@ -64,6 +64,12 @@ namespace streebo.METIS.UI
 
                 if (!IsPostBack)
                 {
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+
+
+
 
                     lblResourceSummary.Text = PropertyLayer.ResourceSummary;
 
@@ -222,6 +228,21 @@ namespace streebo.METIS.UI
             words[1] = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(words[1]);
             username = words[0] + " " + words[1];
             return username;
+        }
+
+        protected void DropDownListLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string strLang = DropDownListLanguage.SelectedValue;
+            if (strLang == "English")
+                PropertyLayer.ResourceFileNameEN = "ResourceEN";
+            else
+            if (strLang == "Russian")
+                PropertyLayer.ResourceFileNameEN = "ResourceRU";
+            else
+            if (strLang == "kyrgyzstan")
+                PropertyLayer.ResourceFileNameEN = "ResourceKZ";
+
+            Response.Redirect(Request.RawUrl);
         }
 
         #region Weekly Master & DetailTable
