@@ -15,6 +15,8 @@ namespace streebo.METIS.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            LoginImg.ImageUrl= HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "LoginIMG").ToString();
             Session["isLogin"] = 0;
             // testing chekc in this is should update
         }

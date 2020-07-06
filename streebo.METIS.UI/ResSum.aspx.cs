@@ -66,14 +66,18 @@ namespace streebo.METIS.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblResourceSummary.Text = PropertyLayer.ResourceSummary;
+
+            lblProjectSummary.Text = PropertyLayer.ProjectSummary;
+            lblAssignments.Text = PropertyLayer.Assignments;
 
             //int x = Convert.ToInt32(Session["isLogin"]);
-            
+
             //if (x == 0)
             //    RFSs.Visible = false;
             //else            
             //    RFSs.Visible = true;            
-                
+
             try
             {
                 

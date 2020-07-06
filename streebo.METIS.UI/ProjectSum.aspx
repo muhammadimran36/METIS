@@ -428,9 +428,9 @@
         	
             <!-- START: Menu -->
            <ul class="menu">
-               	<li><a tabindex="0" href="ResSum.aspx">Resource Summary</a></li>
-                <li class="selected"><a tabindex="1" href="ProjectSum.aspx">Project Summary</a></li>
-                <li><a tabindex="2" href="Assignments.aspx">Assignments</a></li>
+               	<li><a tabindex="0" href="ResSum.aspx"><asp:Label ID="lblResourceSummary" runat="server" Text="Label"></asp:Label></a></li>
+                <li class="selected"><a tabindex="1" href="ProjectSum.aspx"><asp:Label ID="lblProjectSummary" runat="server" Text="Label"></asp:Label></a></li>
+                <li><a tabindex="2" href="Assignments.aspx"><asp:Label ID="lblAssignments" runat="server" Text="Label"></asp:Label></a></li>
                 <li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>   
                 <%--<li id="RFSs" runat="server" ><a tabindex="4" href="RFS.aspx">RFS</a></li>--%>
             </ul>

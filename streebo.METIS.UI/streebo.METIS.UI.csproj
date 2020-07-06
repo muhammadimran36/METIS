@@ -101,6 +101,21 @@
     <Compile Include="AppWindow.aspx.designer.cs">
       <DependentUpon>AppWindow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\ResourceEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceEN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ResourceKZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceKZ.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ResourceRU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceRU.resx</DependentUpon>
+    </Compile>
     <Compile Include="Assignments.aspx.cs">
       <DependentUpon>Assignments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +130,7 @@
     <Compile Include="ComboInGrid1.aspx.designer.cs">
       <DependentUpon>ComboInGrid1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PropertyLayer.cs" />
     <Compile Include="RFS.aspx.cs">
       <DependentUpon>RFS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -397,6 +413,25 @@
       <Project>{5386f611-2387-4ca1-a3cd-2904f3ba478d}</Project>
       <Name>streebo.METIS.BLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ResourceEN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResourceEN.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ResourceRU.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResourceRU.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ResourceKZ.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResourceKZ.Designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

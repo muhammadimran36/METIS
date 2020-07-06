@@ -22,14 +22,23 @@ namespace streebo.METIS.UI
         {
             if (!IsPostBack)
             {                
+
                 #region Check Login
               
                     if (Convert.ToString(Session["user"]) == "")
                         Response.Redirect("Login.aspx");
-                
+
                 #endregion
-               
-                 Boolean b_CanView = false;
+
+
+
+                lblResourceSummary.Text = PropertyLayer.ResourceSummary;
+
+                lblProjectSummary.Text = PropertyLayer.ProjectSummary;
+                lblAssignments.Text = PropertyLayer.Assignments;
+
+
+                Boolean b_CanView = false;
 
                  objBLL = new MetisBLL();
                  System.Data.DataTable dt = objBLL.getAccessRights(Convert.ToString(Session["user"]));

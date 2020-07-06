@@ -64,6 +64,12 @@ namespace streebo.METIS.UI
 
                 if (!IsPostBack)
                 {
+
+                    lblResourceSummary.Text = PropertyLayer.ResourceSummary;
+
+                    lblProjectSummary.Text = PropertyLayer.ProjectSummary;
+                    lblAssignments.Text = PropertyLayer.Assignments;
+
                     Boolean b_CanView = false;
 
                     objBLL = new MetisBLL();

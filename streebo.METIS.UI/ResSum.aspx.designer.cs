@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace streebo.METIS.UI {
-    
-    
-    public partial class ResSum {
-        
+namespace streebo.METIS.UI
+{
+
+
+    public partial class ResSum
+    {
+
         /// <summary>
         /// RadStyleSheetManager1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadStyleSheetManager RadStyleSheetManager1;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// RadScriptManager1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
+
         /// <summary>
         /// RadAjaxManager1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
-        
+
         /// <summary>
         /// RadToolTipManager1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadToolTipManager RadToolTipManager1;
-        
+
         /// <summary>
         /// RadAjaxLoadingPanel1 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
-        
+
         /// <summary>
         /// RadWindowManager1 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadWindowManager RadWindowManager1;
-        
+
         /// <summary>
         /// radwindowPopup control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadWindow radwindowPopup;
-        
+
         /// <summary>
         /// btnClose control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnClose;
-        
+
         /// <summary>
         /// rblAssignmentType control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblAssignmentType;
-        
+
         /// <summary>
         /// RadGrid2 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid2;
-        
+
         /// <summary>
         /// RadGrid_bulk control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid_bulk;
-        
+
         /// <summary>
         /// lbLogout control.
         /// </summary>
@@ -128,7 +130,34 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbLogout;
-        
+
+        /// <summary>
+        /// lblResourceSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResourceSummary;
+
+        /// <summary>
+        /// lblProjectSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProjectSummary;
+
+        /// <summary>
+        /// lblAssignments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAssignments;
+
         /// <summary>
         /// comResource control.
         /// </summary>
@@ -137,7 +166,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox comResource;
-        
+
         /// <summary>
         /// comDepartment control.
         /// </summary>
@@ -146,7 +175,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox comDepartment;
-        
+
         /// <summary>
         /// dpWeekStarting control.
         /// </summary>
@@ -155,7 +184,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadDatePicker dpWeekStarting;
-        
+
         /// <summary>
         /// dpEnding control.
         /// </summary>
@@ -164,7 +193,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadDatePicker dpEnding;
-        
+
         /// <summary>
         /// ddlResourceView control.
         /// </summary>
@@ -173,7 +202,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlResourceView;
-        
+
         /// <summary>
         /// chkavailres control.
         /// </summary>
@@ -182,7 +211,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkavailres;
-        
+
         /// <summary>
         /// cmbReportType control.
         /// </summary>
@@ -191,7 +220,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cmbReportType;
-        
+
         /// <summary>
         /// btnEmail control.
         /// </summary>
@@ -200,7 +229,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnEmail;
-        
+
         /// <summary>
         /// btnExport control.
         /// </summary>
@@ -209,7 +238,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnExport;
-        
+
         /// <summary>
         /// lnkRefresh control.
         /// </summary>
@@ -218,7 +247,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkRefresh;
-        
+
         /// <summary>
         /// imgRefresh control.
         /// </summary>
@@ -227,7 +256,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgRefresh;
-        
+
         /// <summary>
         /// btnExpandAll control.
         /// </summary>
@@ -236,7 +265,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnExpandAll;
-        
+
         /// <summary>
         /// btnCollapseAll control.
         /// </summary>
@@ -245,7 +274,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnCollapseAll;
-        
+
         /// <summary>
         /// RadGrid_weekly control.
         /// </summary>
@@ -254,7 +283,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid_weekly;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -263,7 +292,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// TextBox1 control.
         /// </summary>
@@ -272,7 +301,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -281,7 +310,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// TextBox2 control.
         /// </summary>
@@ -290,7 +319,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -299,7 +328,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-        
+
         /// <summary>
         /// TextBox3 control.
         /// </summary>
@@ -308,7 +337,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -317,7 +346,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// TextBox4 control.
         /// </summary>
@@ -326,7 +355,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
-        
+
         /// <summary>
         /// Label6 control.
         /// </summary>
@@ -335,7 +364,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
-        
+
         /// <summary>
         /// Label5 control.
         /// </summary>
@@ -344,7 +373,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
-        
+
         /// <summary>
         /// Label8 control.
         /// </summary>
@@ -353,7 +382,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label8;
-        
+
         /// <summary>
         /// Label7 control.
         /// </summary>
@@ -362,7 +391,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
-        
+
         /// <summary>
         /// Label10 control.
         /// </summary>
@@ -371,7 +400,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label10;
-        
+
         /// <summary>
         /// Label9 control.
         /// </summary>
@@ -380,7 +409,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label9;
-        
+
         /// <summary>
         /// RadGrid1 control.
         /// </summary>
@@ -389,7 +418,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid1;
-        
+
         /// <summary>
         /// lblResourceID control.
         /// </summary>
@@ -398,7 +427,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResourceID;
-        
+
         /// <summary>
         /// lblResourceIDSearch control.
         /// </summary>
@@ -407,7 +436,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResourceIDSearch;
-        
+
         /// <summary>
         /// lblWeekending control.
         /// </summary>
@@ -416,7 +445,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWeekending;
-        
+
         /// <summary>
         /// lblDay control.
         /// </summary>
@@ -425,7 +454,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDay;
-        
+
         /// <summary>
         /// lblcmbDepartment_selectedValue control.
         /// </summary>
@@ -434,7 +463,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblcmbDepartment_selectedValue;
-        
+
         /// <summary>
         /// lblcmbDepartment_selectedText control.
         /// </summary>
@@ -443,7 +472,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblcmbDepartment_selectedText;
-        
+
         /// <summary>
         /// tbCurrentRow control.
         /// </summary>
@@ -452,7 +481,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbCurrentRow;
-        
+
         /// <summary>
         /// tbEnterBool control.
         /// </summary>
@@ -461,7 +490,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbEnterBool;
-        
+
         /// <summary>
         /// lbRowID control.
         /// </summary>
@@ -470,7 +499,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbRowID;
-        
+
         /// <summary>
         /// Button1 control.
         /// </summary>

@@ -43,7 +43,8 @@
     <div class="loginContainer">
 	
         <div class="form">
-    	    <img src="images/metis_login.png" alt="METIS Logo">
+            <asp:ImageButton ID="LoginImg" runat="server" />
+<%--    	    <img src="<%# HttpContext.GetGlobalResourceObject("ResourceEN", "LoginIMG").ToString() %>" alt="METIS Logo">--%>
    	 	    <form method="post" action="index.html">
         	    <%--<input name="user" type="text" class="user" placeholder="Username">--%>
         	    <asp:TextBox ID="txtUsername" runat="server" CssClass="user" 

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace streebo.METIS.UI {
-    
-    
-    public partial class Login {
-        
+namespace streebo.METIS.UI
+{
+
+
+    public partial class Login
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// RadScriptManager1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
+
         /// <summary>
         /// RadAjaxManager1 control.
         /// </summary>
@@ -38,7 +40,16 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
-        
+
+        /// <summary>
+        /// LoginImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton LoginImg;
+
         /// <summary>
         /// txtUsername control.
         /// </summary>
@@ -47,7 +58,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
-        
+
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
+
         /// <summary>
         /// btnlogin control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace streebo.METIS.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnlogin;
-        
+
         /// <summary>
         /// lblMessage control.
         /// </summary>
