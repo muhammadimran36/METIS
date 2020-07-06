@@ -1279,7 +1279,43 @@ namespace streebo.METIS.BLL
             string query = string.Format("getAllArchiveActionItem");
             return conn.executeSelectStoredProcedure(query);
         }
+        public Boolean insertCompanyResource(string resourceName, DateTime joiningDate, bool status, string resourceID, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("insertCompanyResource");
+            SqlParameter[] sqlParameters = new SqlParameter[5];
 
+            
+            sqlParameters[0] = new SqlParameter("@resourceName", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = resourceName;
+            sqlParameters[1] = new SqlParameter("@JOINING_DATE", SqlDbType.Date);
+            sqlParameters[1].Value = joiningDate;
+            sqlParameters[2] = new SqlParameter("@status", SqlDbType.Bit);
+            sqlParameters[2].Value = status;
+            sqlParameters[3] = new SqlParameter("@resourceID", SqlDbType.VarChar, 255);
+            sqlParameters[3].Value = resourceID;
+            sqlParameters[4] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[4].Direction = ParameterDirection.Output;
+            sqlParameters[4].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeInsertStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                {
+                    p_message = e.ToString();
+                }
+                else
+                {
+                    p_message = sp_return_message;
+                }
+                return false;
+            }
+        }
         public Boolean insertActionItem(string p_ActionItem, string p_Resource, DateTime p_Target, string p_Status,string p_DepartmentID, out string p_message)
         {
 

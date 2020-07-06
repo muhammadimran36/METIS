@@ -897,6 +897,56 @@
                             </MasterTableView>
                         </telerik:RadGrid>
                     </div>
+                    <div id="divCompResources" runat="server">
+                        <telerik:RadCodeBlock runat="server" ID="radCodeBlock8">
+
+                            <script type="text/javascript">
+                                function rgCompResourcesshowFilterItem() {
+                                    $find('<%=rgCompResources.ClientID %>').get_masterTableView().showFilterItem();
+                            }
+                            function rgCompResourceshideFilterItem() {
+                                $find('<%=rgCompResources.ClientID %>').get_masterTableView().hideFilterItem();
+                            }
+                            </script>
+
+                        </telerik:RadCodeBlock>
+                        
+                        <telerik:RadGrid ID="rgCompResources" runat="server" GridLines="None" AllowPaging="True"
+                            AllowSorting="True" AutoGenerateColumns="True" Width="97%" OnNeedDataSource="rgCompResources_NeedDataSource"
+                            OnDeleteCommand="rgCompResources_DeleteCommand" OnInsertCommand="rgCompResources_InsertCommand"
+                            OnUpdateCommand="rgCompResources_UpdateCommand" EnableAJAX="True" OnItemCreated="rgCompResources_ItemCreated"
+                            OnItemDataBound="rgCompResources_ItemDataBound" OnItemCommand="rgCompResources_ItemCommand"
+                            AllowFilteringByColumn="true" PageSize="50">
+                            <GroupingSettings CaseSensitive="false" />
+                            <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
+                            <FilterMenu EnableImageSprites="False">
+                            </FilterMenu>
+                            <ClientSettings AllowKeyboardNavigation="true">
+                                <Selecting CellSelectionMode="None" AllowRowSelect="true"></Selecting>
+                                <KeyboardNavigationSettings AllowActiveRowCycle="true" FocusKey="RightArrow" AllowSubmitOnEnter="true" />
+                            </ClientSettings>
+                            <MasterTableView AutoGenerateColumns="True" DataKeyNames="ResourceID"
+                                EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
+                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
+                                <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
+                                    <HeaderStyle Width="20px"></HeaderStyle>
+                                </RowIndicatorColumn>
+                                <ExpandCollapseColumn Visible="True" FilterControlAltText="Filter ExpandColumn column">
+                                    <HeaderStyle Width="20px"></HeaderStyle>
+                                </ExpandCollapseColumn>
+                                <Columns>
+                                    <telerik:GridEditCommandColumn ButtonType="ImageButton" UniqueName="EditCommandColumn"
+                                        HeaderStyle-Width="50px">
+                                        <HeaderStyle Width="50px"></HeaderStyle>
+                                    </telerik:GridEditCommandColumn>
+                                </Columns>
+                                <EditFormSettings>
+                                    <EditColumn FilterControlAltText="Filter EditCommandColumn column">
+                                    </EditColumn>
+                                </EditFormSettings>
+                            </MasterTableView>
+                        </telerik:RadGrid>
+                    </div>
                     <div id="divUpComingProjects" runat="server">
                         <telerik:RadCodeBlock runat="server" ID="radCodeBlock5">
 

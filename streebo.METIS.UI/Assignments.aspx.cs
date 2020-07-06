@@ -87,6 +87,7 @@ namespace streebo.METIS.UI
                     divUpComingProjects.Visible = false;
                     CheckBox1.Visible = true;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     //rgBulkAssignment.DataSource = objBLL.getAllBulkAssignments(Session["user"].ToString());
                     //rgBulkAssignment.DataBind();
                     break;
@@ -99,6 +100,7 @@ namespace streebo.METIS.UI
                     divUpComingProjects.Visible = false;
                     CheckBox1.Visible = false;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     rgDepartments.DataSource = depManager.getDeparments();
                     rgDepartments.DataBind();
                     break;
@@ -110,6 +112,7 @@ namespace streebo.METIS.UI
                     divUpComingProjects.Visible = false;
                     CheckBox1.Visible = false;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     rgResourceInDepartment.DataSource = objBLL.getAllResourceAssociations();
                     rgResourceInDepartment.DataBind();
                     break;
@@ -122,6 +125,7 @@ namespace streebo.METIS.UI
                     divUpComingProjects.Visible = false;
                     CheckBox1.Visible = false;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     rgResourceOnProjects.DataSource = objBLL.getAllResourceAssignments(Session["user"].ToString());
                     rgResourceOnProjects.DataBind();
                     break;
@@ -134,6 +138,7 @@ namespace streebo.METIS.UI
                     divUpComingProjects.Visible = false;
                     CheckBox1.Visible = false;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     rgResourceLeaves.DataSource = objBLL.getAllResourceLeaves();
                     rgResourceLeaves.DataBind();
                     break;
@@ -146,6 +151,7 @@ namespace streebo.METIS.UI
                     divResourceLeaves.Visible = false;
                     CheckBox1.Visible = false;
                     divRoles.Visible = false;
+                    divCompResources.Visible = false;
                     rgUpComingProject.DataSource = objBLL.getAllUpComingProject();
                     rgUpComingProject.DataBind();
                     break;
@@ -158,14 +164,31 @@ namespace streebo.METIS.UI
                     divResourceOnProjects.Visible = false;
                     divResourceLeaves.Visible = false;
                     CheckBox1.Visible = false;
+                    divCompResources.Visible = false;
                     rgRoles.DataSource = objBLL.getAllUpComingProject();
                     rgRoles.DataBind();
                     break;
-                case "Add Project":
-                   
-                    break;
                 case "Add Resource":
-                   
+                    divBulkAssignment.Visible = false;
+                    divDepartment.Visible = false;
+                    divResourceInDepartment.Visible = false;
+                    divResourceOnProjects.Visible = false;
+                    divUpComingProjects.Visible = false;
+                    CheckBox1.Visible = false;
+                    divRoles.Visible = false;
+                    divCompResources.Visible = true;
+                    rgCompResources.DataSource = objBLL.getAllResources(Convert.ToString(Session["user"]));
+                    rgCompResources.DataBind();
+                    break;
+                case "Add Project":
+                    divBulkAssignment.Visible = false;
+                    divDepartment.Visible = false;
+                    divResourceInDepartment.Visible = false;
+                    divResourceOnProjects.Visible = false;
+                    divUpComingProjects.Visible = false;
+                    divCompResources.Visible = false;
+                    CheckBox1.Visible = false;
+                    divRoles.Visible = false;
                     break;
                 default:
                     break;
@@ -547,6 +570,135 @@ namespace streebo.METIS.UI
             if (e.CommandName.Equals("Cancel"))
             {
                 rgResourceInDepartment.DataBind();
+            }
+        }
+        #endregion
+
+        #region "Resources In Company"
+        protected void rgCompResources_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
+        {
+
+            objBLL = new MetisBLL();
+            rgCompResources.DataSource = objBLL.getAllResources(Convert.ToString(Session["user"]));
+        }
+        protected void rgCompResources_DeleteCommand(object source, Telerik.Web.UI.GridCommandEventArgs e)
+        {
+            GridDataItem item = (GridDataItem)e.Item;
+
+            //string DepartmentID = item.OwnerTableView.DataKeyValues[item.ItemIndex]["DepartmentID"].ToString();
+
+            try
+            {
+                //string p_message = "";
+                //objBLL = new MetisBLL();
+                //objBLL.deleteDepartment(DepartmentID, out p_message);
+            }
+            catch (Exception ex)
+            {
+                rgResourceInDepartment.Controls.Add(new LiteralControl("Unable to delete Department. Reason: " + ex.Message));
+                e.Canceled = true;
+            }
+        }
+        protected void rgCompResources_UpdateCommand(object source, Telerik.Web.UI.GridCommandEventArgs e)
+        {
+        }
+        protected void rgCompResources_InsertCommand(object source, Telerik.Web.UI.GridCommandEventArgs e)
+        {
+        }
+        protected void rgCompResources_ItemCreated(object sender, GridItemEventArgs e)
+        {
+            try
+            {
+                if (e.Item is GridEditableItem && e.Item.IsInEditMode)
+                {
+                    DropDownList tb = (e.Item as GridEditableItem)["comboResourceName"].FindControl("comboResourceName") as DropDownList;
+                    tb.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "validation", "alert('" + ex.Message + "')", true);
+
+            }
+        }
+        protected void rgCompResources_ItemDataBound(object sender, GridItemEventArgs e)
+        {
+            try
+            {
+                //if (e.Item is GridDataItem && e.Item.IsInEditMode)
+                //{
+                //    GridDataItem item = (GridDataItem)e.Item;
+                //    DropDownList comboResourceName = (e.Item as GridEditableItem)["ResourceName"].FindControl("comboResourceName") as DropDownList;
+                //    TextBox txtWorkLoad = (e.Item as GridEditableItem)["BulkWorkLoad"].FindControl("txtWorkLoad") as TextBox;
+                //    objBLL = new MetisBLL();
+                //    comboResourceName.DataSource = objBLL.getAllResources(Convert.ToString(Session["user"]));
+                //    comboResourceName.DataTextField = objBLL.getAllResources(Convert.ToString(Session["user"])).Columns[1].ToString();
+                //    comboResourceName.DataValueField = objBLL.getAllResources(Convert.ToString(Session["user"])).Columns[0].ToString();
+                //    comboResourceName.DataBind();
+                //    comboResourceName.Width = Unit.Pixel(240); // Set the width  
+
+                //    DropDownList comboDepartmentName = (e.Item as GridEditableItem)["DepartmentName"].FindControl("comboDepartmentName") as DropDownList;
+                //    objBLL = new MetisBLL();
+                //    comboDepartmentName.DataSource = depManager.getDeparments();
+                //    comboDepartmentName.DataTextField = depManager.getDeparments().Columns[1].ToString();
+                //    comboDepartmentName.DataValueField = depManager.getDeparments().Columns[0].ToString();
+                //    comboDepartmentName.DataBind();
+                //    comboDepartmentName.Width = Unit.Pixel(240); // Set the width  
+
+                //    comboResourceName.Items.FindByText(Session["ResourceName"].ToString()).Selected = true;
+                //    comboDepartmentName.Items.FindByText(Session["DepartmentName"].ToString()).Selected = true;
+                //}
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "validation", "alert('" + ex.Message + "')", true);
+
+            }
+
+        }
+        protected void rgCompResources_ItemCommand(object sender, GridCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("PerformInsert"))
+            {
+
+                TextBox ResourceName = (TextBox)e.Item.FindControl("ResourceName");
+
+
+                string p_message = "";
+                objBLL = new MetisBLL();
+                objBLL.insertCompanyResource("Imran Iqbal",DateTime.Now,true,"2001",out p_message);
+
+                rgCompResources.DataSource = objBLL.getAllResources(Convert.ToString(Session["user"]));
+                rgCompResources.DataBind();
+            }
+
+            if (e.CommandName.Equals("Edit"))
+            {
+                //GridDataItem item = (GridDataItem)e.Item;
+                //string ResourceName = ((DataBoundLiteralControl)item.Controls[3].Controls[0]).Text.Trim();
+                //string DepartmentName = ((DataBoundLiteralControl)item.Controls[4].Controls[0]).Text.Trim();
+                ////Session["DepartmentID"] = DepartmentID;
+                //Session["ResourceName"] = ResourceName;
+                //Session["DepartmentName"] = DepartmentName;
+
+                //rgResourceInDepartment.DataBind();
+            }
+
+            if (e.CommandName.Equals("Update"))
+            {
+                //DropDownList comboResourceName = (DropDownList)e.Item.FindControl("comboResourceName");
+                //DropDownList comboDepartmentName = (DropDownList)e.Item.FindControl("comboDepartmentName");
+                //string ResourceAssociationID = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["ResourceAssociationID"].ToString();
+                //string p_message = "";
+                //objBLL = new MetisBLL();
+                //objBLL.updateResourceAssociation(ResourceAssociationID, comboResourceName.SelectedItem.Text, comboDepartmentName.SelectedItem.Text, out p_message);
+
+                //rgResourceInDepartment.DataSource = objBLL.getAllResourceAssociations();
+                //rgResourceInDepartment.DataBind();
+            }
+            if (e.CommandName.Equals("Cancel"))
+            {
+                //rgResourceInDepartment.DataBind();
             }
         }
         #endregion
