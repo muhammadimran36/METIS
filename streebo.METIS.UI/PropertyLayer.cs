@@ -4,7 +4,12 @@ namespace streebo.METIS.UI
 {
     public class PropertyLayer
     {
-        public static string ResourceFileNameEN { get { return "ResourceEN"; } }
+
+        public static string ResourceFileNameEN
+        {
+            get; set;
+        }
+      //  public static string ResourceFileNameEN { get { return "ResourceRU"; }  set { } }
 
         public static string ResourceSummary { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "ResourceSummary").ToString(); } }
 
