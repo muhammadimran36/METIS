@@ -141,6 +141,15 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadCodeBlock radCodeBlock3;
 
         /// <summary>
+        /// LabelShowFilteringItem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelShowFilteringItem;
+
+        /// <summary>
         /// Radio7 control.
         /// </summary>
         /// <remarks>
@@ -150,6 +159,15 @@ namespace streebo.METIS.UI
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio7;
 
         /// <summary>
+        /// LabelYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelYes;
+
+        /// <summary>
         /// Radio8 control.
         /// </summary>
         /// <remarks>
@@ -157,6 +175,15 @@ namespace streebo.METIS.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio8;
+
+        /// <summary>
+        /// LabelNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNo;
 
         /// <summary>
         /// RadDatePicker1 control.

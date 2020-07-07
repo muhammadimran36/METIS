@@ -23,7 +23,7 @@
                       Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
-                 <asp:ListItem Value="kyrgyzstan" Text="kyrgyzstan"></asp:ListItem>
+                 <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
                       </asp:DropDownList>
 
                 </div>
@@ -83,11 +83,12 @@
 
                         </telerik:RadCodeBlock>
                         <div>
-                            Show filtering item
+                           
+                            <asp:Label ID="LabelShowFilteringItem" runat="server" Text="Show filtering item"></asp:Label>
                         <input id="Radio7" type="radio" runat="server" name="showHideGroup" checked="true"
-                            onclick="rgBulkAssignmentshowFilterItem()" /><label for="Radio1">Yes</label>
+                            onclick="rgBulkAssignmentshowFilterItem()" /><label for="Radio1"><asp:Label ID="LabelYes" runat="server" Text="Yes"></asp:Label></label>
                             <input id="Radio8" type="radio" runat="server" name="showHideGroup" onclick="rgBulkAssignmenthideFilterItem()" /><label
-                                for="Radio2">No</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                for="Radio2"><asp:Label ID="LabelNo" runat="server" Text="No"></asp:Label></label>&nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
                         <telerik:RadDatePicker ID="RadDatePicker1" Style="display: none;" MinDate="01/01/1900"
                             MaxDate="12/31/2100" runat="server">
@@ -96,7 +97,7 @@
                             AllowSorting="True" AutoGenerateColumns="False" Width="97%" OnNeedDataSource="rgBulkAssignment_NeedDataSource"
                             OnDeleteCommand="rgBulkAssignment_DeleteCommand" OnInsertCommand="rgBulkAssignment_InsertCommand"
                             OnUpdateCommand="rgBulkAssignment_UpdateCommand" EnableAJAX="True" OnItemCreated="rgBulkAssignment_ItemCreated"
-                            OnItemDataBound="rgBulkAssignment_ItemDataBound" OnItemCommand="rgBulkAssignment_ItemCommand"
+                            OnItemDataBound="rgBulkAssignment_ItemDataBound" OnItemCommand="rgBulkAssignment_ItemCommand"  OnDataBinding="rgBulkAssignment_DataBinding"
                             AllowFilteringByColumn="true" TabIndex="9" PageSize="15" AllowMultiRowEdit="false">
                             <GroupingSettings CaseSensitive="false" />
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
@@ -304,7 +305,7 @@
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="BulkAssignmentID" EditMode="InPlace"
                                 CommandItemDisplay="Top">
-                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new record"
+                                <CommandItemSettings  ExportToPdfText="Export to PDF"  AddNewRecordText="Add new record" 
                                     ShowAddNewRecordButton="true"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
@@ -474,7 +475,7 @@
                             OnPreRender="rgResourceLeaves_PreRender"
                             OnDeleteCommand="rgResourceLeaves_DeleteCommand" OnInsertCommand="rgResourceLeaves_InsertCommand"
                             OnUpdateCommand="rgResourceLeaves_UpdateCommand" EnableAJAX="True" OnItemCreated="rgResourceLeaves_ItemCreated"
-                            OnItemDataBound="rgResourceLeaves_ItemDataBound" OnItemCommand="rgResourceLeaves_ItemCommand"
+                            OnItemDataBound="rgResourceLeaves_ItemDataBound" OnItemCommand="rgResourceLeaves_ItemCommand" OnDataBinding="rgResourceLeaves_DataBinding"
                             AllowFilteringByColumn="true" TabIndex="10" PageSize="50">
                             <GroupingSettings CaseSensitive="false" />
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
@@ -613,7 +614,7 @@
                             AllowSorting="True" AutoGenerateColumns="False" Width="97%" OnNeedDataSource="rgDepartments_NeedDataSource"
                             OnDeleteCommand="rgDepartments_DeleteCommand" OnInsertCommand="rgDepartments_InsertCommand"
                             OnUpdateCommand="rgDepartments_UpdateCommand" EnableAJAX="True" OnItemCreated="rgDepartments_ItemCreated"
-                            OnItemDataBound="rgDepartments_ItemDataBound" OnItemCommand="rgDepartments_ItemCommand"
+                            OnItemDataBound="rgDepartments_ItemDataBound" OnItemCommand="rgDepartments_ItemCommand" OnDataBinding="rgDepartments_DataBinding"
                             AllowFilteringByColumn="True" PageSize="15">
                             <GroupingSettings CaseSensitive="false" />
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
@@ -729,7 +730,7 @@
                             AllowSorting="True" AutoGenerateColumns="False" Width="97%" OnNeedDataSource="rgResourceOnProjects_NeedDataSource"
                             OnDeleteCommand="rgResourceOnProjects_DeleteCommand" OnInsertCommand="rgResourceOnProjects_InsertCommand"
                             OnUpdateCommand="rgResourceOnProjects_UpdateCommand" EnableAJAX="True" OnItemCreated="rgResourceOnProjects_ItemCreated"
-                            OnItemDataBound="rgResourceOnProjects_ItemDataBound" OnItemCommand="rgResourceOnProjects_ItemCommand"
+                            OnItemDataBound="rgResourceOnProjects_ItemDataBound" OnItemCommand="rgResourceOnProjects_ItemCommand" OnDataBinding="rgResourceOnProjects_DataBinding"
                             AllowFilteringByColumn="true" PageSize="50">
                             <GroupingSettings CaseSensitive="false" />
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
@@ -835,7 +836,7 @@
                             AllowSorting="True" AutoGenerateColumns="False" Width="97%" OnNeedDataSource="rgResourceInDepartment_NeedDataSource"
                             OnDeleteCommand="rgResourceInDepartment_DeleteCommand" OnInsertCommand="rgResourceInDepartment_InsertCommand"
                             OnUpdateCommand="rgResourceInDepartment_UpdateCommand" EnableAJAX="True" OnItemCreated="rgResourceInDepartment_ItemCreated"
-                            OnItemDataBound="rgResourceInDepartment_ItemDataBound" OnItemCommand="rgResourceInDepartment_ItemCommand"
+                            OnItemDataBound="rgResourceInDepartment_ItemDataBound" OnItemCommand="rgResourceInDepartment_ItemCommand" OnDataBinding="rgResourceInDepartment_DataBinding"
                             AllowFilteringByColumn="true" PageSize="50">
                             <GroupingSettings CaseSensitive="false" />
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>

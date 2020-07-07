@@ -468,7 +468,7 @@
                    &nbsp;|&nbsp;  Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
-                 <asp:ListItem Value="kyrgyzstan" Text="kyrgyzstan"></asp:ListItem>
+                 <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
                       </asp:DropDownList>
                 </div>
             </div>
@@ -610,7 +610,7 @@
                         Skin="Office2007" GridLines="Both" AllowSorting="True" OnDetailTableDataBind="RadGrid_weekly_DetailTableDataBind"
                         OnPreRender="RadGrid_weekly_PreRender" Width="99%" AutoGenerateColumns="false"
                         OnUpdateCommand="RadGrid_weekly_UpdateCommand" OnItemCreated="RadGrid_weekly_ItemCreated"
-                        OnItemCommand="RadGrid_weekly_ItemCommand" OnItemDataBound="RadGrid_weekly_ItemDataBound"
+                        OnItemCommand="RadGrid_weekly_ItemCommand" OnItemDataBound="RadGrid_weekly_ItemDataBound" OnDataBinding="RadGrid_weekly_DataBinding"
                         OnNeedDataSource="RadGrid_weekly_NeedDataSource" OnGridExporting="RadGrid_weekly_Export">
                         <FilterMenu EnableImageSprites="False">
                         </FilterMenu>
@@ -626,7 +626,7 @@
                             DataKeyNames="Resource_id" AlternatingItemStyle-CssClass="color1" ClientDataKeyNames="Resource_id">
                             <CommandItemSettings ExportToPdfText="Export to PDF"></CommandItemSettings>
                             <Columns>
-                                <telerik:GridTemplateColumn HeaderText="Name" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
+                                <telerik:GridTemplateColumn HeaderText="Name" UniqueName="UName" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
                                     DataField="Resource_name" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains"
                                     HeaderStyle-Width="360px">
                                     <ItemTemplate>
@@ -637,20 +637,20 @@
                             </Columns>
                             <DetailTables>
                                 <telerik:GridTableView runat="server" DataKeyNames="Project_id" CommandItemDisplay="None"
-                                    EditMode="InPlace" TabIndex="-1" Name="DetailTable" Width="98%" AutoGenerateColumns="true"
+                                    EditMode="InPlace" TabIndex="-1" Name="DetailTable" Width="98%" AutoGenerateColumns="true" 
                                     HeaderStyle-Font-Size="Smaller" ShowHeadersWhenNoRecords="false">
                                     <Columns>
                                         <telerik:GridEditCommandColumn ButtonType="ImageButton" UniqueName="EditCommandColumn"
                                             HeaderStyle-Width="40px">
                                             <HeaderStyle Width="40px"></HeaderStyle>
                                         </telerik:GridEditCommandColumn>
-                                        <telerik:GridTemplateColumn HeaderText="Project" DataField="Project" HeaderStyle-Width="220px">
+                                        <telerik:GridTemplateColumn HeaderText="Project" UniqueName="UProject" DataField="Project" HeaderStyle-Width="220px">
                                             <ItemTemplate>
                                                 <asp:HyperLink runat="server" Text='<%# Eval("Project") %>'></asp:HyperLink>
                                             </ItemTemplate>
                                             <HeaderStyle Width="220px"></HeaderStyle>
                                         </telerik:GridTemplateColumn>
-                                        <telerik:GridTemplateColumn HeaderText="Role" DataField="Role" HeaderStyle-Width="100px">
+                                        <telerik:GridTemplateColumn UniqueName="URole" HeaderText="Role" DataField="Role" HeaderStyle-Width="100px">
                                             <ItemTemplate>
                                                 <asp:HyperLink runat="server" Text='<%# Eval("Role_Title") %>'></asp:HyperLink>
                                             </ItemTemplate>

@@ -123,13 +123,70 @@
   <data name="Assignments" xml:space="preserve">
     <value>Тапсырмалар</value>
   </data>
+  <data name="BulkEndDate" xml:space="preserve">
+    <value>Жаппай аяқталу күні</value>
+  </data>
+  <data name="BulkStartDate" xml:space="preserve">
+    <value>Жаппай басталу күні</value>
+  </data>
+  <data name="DepartmentID" xml:space="preserve">
+    <value>Бөлімнің жеке куәлігі</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Бөлімнің атауы</value>
+  </data>
+  <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
+    <value>Тапсыру күні</value>
+  </data>
+  <data name="GrdAsingmentProjectName" xml:space="preserve">
+    <value>Жобаның атауы</value>
+  </data>
+  <data name="GrdAsingmentResourceName" xml:space="preserve">
+    <value>Ресурстың атауы</value>
+  </data>
+  <data name="GrdAsingmentTypeName" xml:space="preserve">
+    <value>Тапсырма түрінің атауы</value>
+  </data>
+  <data name="GrdEndDate" xml:space="preserve">
+    <value>Аяқталу күні</value>
+  </data>
+  <data name="GrdStartDate" xml:space="preserve">
+    <value>Басталатын күн</value>
+  </data>
+  <data name="GrdWorkload" xml:space="preserve">
+    <value>Жұмыс жүктемесі</value>
+  </data>
+  <data name="LabelTextNo" xml:space="preserve">
+    <value>Жоқ</value>
+  </data>
+  <data name="LabelTextYes" xml:space="preserve">
+    <value>Иә</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Аты</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Жобаның қысқаша мазмұны</value>
   </data>
+  <data name="ReportTo" xml:space="preserve">
+    <value>Есеп беру</value>
+  </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Ресурстың қысқаша мазмұны</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Рөл атауы</value>
+  </data>
+  <data name="ShowFilterItemText" xml:space="preserve">
+    <value>Сүзгі элементін көрсету</value>
+  </data>
+  <data name="ShowHistory" xml:space="preserve">
+    <value>Тарихты көрсету</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Күй</value>
   </data>
 </root>

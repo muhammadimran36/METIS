@@ -123,13 +123,70 @@
   <data name="Assignments" xml:space="preserve">
     <value>Assignments</value>
   </data>
+  <data name="BulkEndDate" xml:space="preserve">
+    <value>Bulk End Date</value>
+  </data>
+  <data name="BulkStartDate" xml:space="preserve">
+    <value>Bulk Start Date</value>
+  </data>
+  <data name="DepartmentID" xml:space="preserve">
+    <value>DepartmentID</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Department Name</value>
+  </data>
+  <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
+    <value>Date of Assignment</value>
+  </data>
+  <data name="GrdAsingmentProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="GrdAsingmentResourceName" xml:space="preserve">
+    <value>Resource Name</value>
+  </data>
+  <data name="GrdAsingmentTypeName" xml:space="preserve">
+    <value>Assignment Type Name</value>
+  </data>
+  <data name="GrdEndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="GrdStartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="GrdWorkload" xml:space="preserve">
+    <value>Workload</value>
+  </data>
+  <data name="LabelTextNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="LabelTextYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Project Summary</value>
   </data>
+  <data name="ReportTo" xml:space="preserve">
+    <value>Report To</value>
+  </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Resource Summary</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Role Name</value>
+  </data>
+  <data name="ShowFilterItemText" xml:space="preserve">
+    <value>Show filtering item</value>
+  </data>
+  <data name="ShowHistory" xml:space="preserve">
+    <value>Show History</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
   </data>
 </root>

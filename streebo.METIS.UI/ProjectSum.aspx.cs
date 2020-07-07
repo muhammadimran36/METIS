@@ -66,7 +66,7 @@ namespace streebo.METIS.UI
                 {
                     if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
                     if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
-                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kazakh";
 
 
 
@@ -239,7 +239,7 @@ namespace streebo.METIS.UI
             if (strLang == "Russian")
                 PropertyLayer.ResourceFileNameEN = "ResourceRU";
             else
-            if (strLang == "kyrgyzstan")
+            if (strLang == "kazakh")
                 PropertyLayer.ResourceFileNameEN = "ResourceKZ";
 
             Response.Redirect(Request.RawUrl);
@@ -1148,6 +1148,7 @@ namespace streebo.METIS.UI
         protected void RadGrid_bulk_ItemDataBound(object sender, GridItemEventArgs e)
         {
 
+            
         }
 
         protected void RadGrid_bulk_UpdateCommand(object source, GridCommandEventArgs e)

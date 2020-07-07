@@ -79,11 +79,137 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bulk End Date.
+        /// </summary>
+        internal static string BulkEndDate {
+            get {
+                return ResourceManager.GetString("BulkEndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bulk Start Date.
+        /// </summary>
+        internal static string BulkStartDate {
+            get {
+                return ResourceManager.GetString("BulkStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DepartmentID.
+        /// </summary>
+        internal static string DepartmentID {
+            get {
+                return ResourceManager.GetString("DepartmentID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department Name.
+        /// </summary>
+        internal static string DepartmentName {
+            get {
+                return ResourceManager.GetString("DepartmentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of Assignment.
+        /// </summary>
+        internal static string GrdAsingmentDateOfAssignemnt {
+            get {
+                return ResourceManager.GetString("GrdAsingmentDateOfAssignemnt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name.
+        /// </summary>
+        internal static string GrdAsingmentProjectName {
+            get {
+                return ResourceManager.GetString("GrdAsingmentProjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resource Name.
+        /// </summary>
+        internal static string GrdAsingmentResourceName {
+            get {
+                return ResourceManager.GetString("GrdAsingmentResourceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment Type Name.
+        /// </summary>
+        internal static string GrdAsingmentTypeName {
+            get {
+                return ResourceManager.GetString("GrdAsingmentTypeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        internal static string GrdEndDate {
+            get {
+                return ResourceManager.GetString("GrdEndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        internal static string GrdStartDate {
+            get {
+                return ResourceManager.GetString("GrdStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workload.
+        /// </summary>
+        internal static string GrdWorkload {
+            get {
+                return ResourceManager.GetString("GrdWorkload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string LabelTextNo {
+            get {
+                return ResourceManager.GetString("LabelTextNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string LabelTextYes {
+            get {
+                return ResourceManager.GetString("LabelTextYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to images/metis_login.png.
         /// </summary>
         internal static string LoginIMG {
             get {
                 return ResourceManager.GetString("LoginIMG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
@@ -97,11 +223,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Report To.
+        /// </summary>
+        internal static string ReportTo {
+            get {
+                return ResourceManager.GetString("ReportTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resource Summary.
         /// </summary>
         internal static string ResourceSummary {
             get {
                 return ResourceManager.GetString("ResourceSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role Name.
+        /// </summary>
+        internal static string RoleName {
+            get {
+                return ResourceManager.GetString("RoleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show filtering item.
+        /// </summary>
+        internal static string ShowFilterItemText {
+            get {
+                return ResourceManager.GetString("ShowFilterItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show History.
+        /// </summary>
+        internal static string ShowHistory {
+            get {
+                return ResourceManager.GetString("ShowHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        internal static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
     }

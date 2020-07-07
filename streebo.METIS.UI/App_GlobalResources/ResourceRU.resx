@@ -123,13 +123,70 @@
   <data name="Assignments" xml:space="preserve">
     <value>Назначения</value>
   </data>
+  <data name="BulkEndDate" xml:space="preserve">
+    <value>Массовая дата окончания</value>
+  </data>
+  <data name="BulkStartDate" xml:space="preserve">
+    <value>Массовая дата начала</value>
+  </data>
+  <data name="DepartmentID" xml:space="preserve">
+    <value>Идентификатор отдела</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>название отдела</value>
+  </data>
+  <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
+    <value>Дата назначения</value>
+  </data>
+  <data name="GrdAsingmentProjectName" xml:space="preserve">
+    <value>название проекта</value>
+  </data>
+  <data name="GrdAsingmentResourceName" xml:space="preserve">
+    <value>Название ресурса</value>
+  </data>
+  <data name="GrdAsingmentTypeName" xml:space="preserve">
+    <value>Имя типа назначения</value>
+  </data>
+  <data name="GrdEndDate" xml:space="preserve">
+    <value>Дата окончания</value>
+  </data>
+  <data name="GrdStartDate" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="GrdWorkload" xml:space="preserve">
+    <value>Нагрузка</value>
+  </data>
+  <data name="LabelTextNo" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="LabelTextYes" xml:space="preserve">
+    <value>да</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>название</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Краткое описание проекта</value>
   </data>
+  <data name="ReportTo" xml:space="preserve">
+    <value>Сообщить в</value>
+  </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Резюме ресурса</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Имя роли</value>
+  </data>
+  <data name="ShowFilterItemText" xml:space="preserve">
+    <value>Показать элемент фильтрации</value>
+  </data>
+  <data name="ShowHistory" xml:space="preserve">
+    <value>Показать историю</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Положение дел</value>
   </data>
 </root>

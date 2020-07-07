@@ -96,7 +96,7 @@ namespace streebo.METIS.UI
 
                     if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
                     if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
-                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+                    if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kazakh";
 
                     lblResourceSummary.Text = PropertyLayer.ResourceSummary;
 
@@ -351,7 +351,7 @@ namespace streebo.METIS.UI
             if (strLang == "Russian")
                 PropertyLayer.ResourceFileNameEN = "ResourceRU";
             else
-            if (strLang == "kyrgyzstan")
+            if (strLang == "kazakh")
                 PropertyLayer.ResourceFileNameEN = "ResourceKZ";
 
             Response.Redirect(Request.RawUrl);
@@ -459,8 +459,12 @@ namespace streebo.METIS.UI
 
         protected void RadGrid_weekly_ItemDataBound(object sender, GridItemEventArgs e)
         {
+
             try
             {
+                // RadGrid_weekly.MasterTableView.GetColumn("URole").HeaderText = PropertyLayer.RoleName;
+               
+
                 int i = RadGrid_weekly.Items.Count;
                 Label5.Text = i.ToString();
                 if (e.Item is GridHeaderItem && e.Item.OwnerTableView.Name == "DetailTable")
@@ -737,9 +741,10 @@ namespace streebo.METIS.UI
         {
             try
             {
+
                 GridDataItem parentItem = e.DetailTableView.ParentItem as GridDataItem;
                 lblResourceID.Text = parentItem["Resource_id"].Text;
-                
+
 
                 objBLL = new MetisBLL();
                 DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(lblResourceID.Text), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);             
@@ -2912,5 +2917,15 @@ namespace streebo.METIS.UI
 
         #endregion
 
+        protected void RadGrid_weekly_DataBinding(object sender, EventArgs e)
+        {
+            RadGrid_weekly.MasterTableView.GetColumn("UName").HeaderText = PropertyLayer.Name;
+            //RadGrid_weekly.MasterTableView.GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("URole").HeaderText = PropertyLayer.RoleName;
+
+
+
+        }
     }
 }

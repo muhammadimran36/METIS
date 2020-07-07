@@ -422,7 +422,7 @@
                     &nbsp;|&nbsp;  Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
-                 <asp:ListItem Value="kyrgyzstan" Text="kyrgyzstan"></asp:ListItem>
+                 <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
                       </asp:DropDownList>
 
             </div>
@@ -562,13 +562,13 @@
                                 HeaderStyle-Width="40px">
                             </telerik:GridEditCommandColumn>
                             
-                            <telerik:GridTemplateColumn HeaderText="Resource"
+                            <telerik:GridTemplateColumn UniqueName="UResource" HeaderText="Resource"
                             DataField="Project" HeaderStyle-Width="220px">
                             <ItemTemplate>
                                 <asp:HyperLink runat="server"  Text='<%# Eval("Resource") %>'></asp:HyperLink>
                             </ItemTemplate>
                         </telerik:GridTemplateColumn>
-                        <telerik:GridTemplateColumn HeaderText="Role"
+                        <telerik:GridTemplateColumn UniqueName="URole" HeaderText="Role"
                             DataField="Role" HeaderStyle-Width="100px">
                             <ItemTemplate>
                                 <asp:HyperLink runat="server"  Text='<%# Eval("Role_Title") %>'></asp:HyperLink>

@@ -32,8 +32,12 @@ namespace streebo.METIS.UI
 
                     
                 if (PropertyLayer.ResourceFileNameEN == "ResourceEN") DropDownListLanguage.SelectedValue = "English";
-                if (PropertyLayer.ResourceFileNameEN == "ResourceRU") DropDownListLanguage.SelectedValue = "Russian";
-                if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kyrgyzstan";
+                if (PropertyLayer.ResourceFileNameEN == "ResourceRU")
+                {
+                    DropDownListLanguage.SelectedValue = "Russian";
+                   // CultureInfo newCulture = CultureInfo.CreateSpecificCulture("")
+                }
+                if (PropertyLayer.ResourceFileNameEN == "ResourceKZ") DropDownListLanguage.SelectedValue = "kazakh";
 
 
 
@@ -41,6 +45,12 @@ namespace streebo.METIS.UI
 
                 lblProjectSummary.Text = PropertyLayer.ProjectSummary;
                 lblAssignments.Text = PropertyLayer.Assignments;
+
+
+                LabelShowFilteringItem.Text = PropertyLayer.ShowFilterItemText;
+                LabelYes.Text = PropertyLayer.LabelTextYes;
+                LabelNo.Text = PropertyLayer.LabelTextNo;
+                CheckBox1.Text = PropertyLayer.ShowHistory;
 
 
                 Boolean b_CanView = false;
@@ -983,6 +993,15 @@ namespace streebo.METIS.UI
         {
             try
             {
+
+               // GridHeaderItem headerItem = e.Item as GridHeaderItem;
+                // LinkButton button = headerItem["WeekEnding"].Controls[0] as LinkButton;
+                // button.Text = "My customized contact name";
+                //if (headerItem != null)
+                //{
+                   // if(headerItem["ContactName"] !=null)
+                 //       LinkButton ob = headerItem["ContactName"].Controls[0] as LinkButton
+               // }
                 if (e.Item is GridEditableItem && e.Item.IsInEditMode)
                 {
                     
@@ -1100,6 +1119,15 @@ namespace streebo.METIS.UI
         {
             try
             {
+                //  foreach (GridHeaderItem item in rgBulkAssignment.MasterTableView.GetItems(GridItemType.Header))
+                //{
+                //  item["WeekEnding"].Text = "some text";
+                //  item["ResourceName"].Text = "Resource Name E";
+
+                //}
+              
+
+
                 if (e.Item is GridDataItem && e.Item.IsInEditMode)
                 {
                     //if (rgBulkAssignment.EditIndexes.Count <= 1)
@@ -1191,6 +1219,8 @@ namespace streebo.METIS.UI
 
         protected void rgBulkAssignment_ItemCommand(object sender, GridCommandEventArgs e)
         {
+           
+
             if (e.CommandName.Equals("PerformInsert"))
             {
                 //Telerik.Web.UI.RadComboBox comResourceName = (Telerik.Web.UI.RadComboBox)e.Item.FindControl("comResourceName");
@@ -1642,6 +1672,9 @@ namespace streebo.METIS.UI
 
         protected void rgResourceLeaves_ItemCreated(object sender, GridItemEventArgs e)
         {
+
+           
+
             if (e.Item is GridEditableItem && e.Item.IsInEditMode)
             {
 
@@ -2426,10 +2459,60 @@ namespace streebo.METIS.UI
             if (strLang == "Russian")
                 PropertyLayer.ResourceFileNameEN = "ResourceRU";
             else
-            if (strLang == "kyrgyzstan")
+            if (strLang == "kazakh")
                 PropertyLayer.ResourceFileNameEN = "ResourceKZ";
 
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void rgBulkAssignment_DataBinding(object sender, EventArgs e)
+        {
+
+           
+                rgBulkAssignment.MasterTableView.GetColumn("ResourceName").HeaderText = PropertyLayer.GrdAsingmentResourceName;
+            // weekedning is date of assignement
+            rgBulkAssignment.MasterTableView.GetColumn("WeekEnding").HeaderText = PropertyLayer.GrdAsingmentDateOfAssignemnt;
+            rgBulkAssignment.MasterTableView.GetColumn("ProjectName").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            rgBulkAssignment.MasterTableView.GetColumn("AssignmentTypeName").HeaderText = PropertyLayer.GrdAsingmentTypeName;
+            rgBulkAssignment.MasterTableView.GetColumn("BulkStartDate").HeaderText = PropertyLayer.GrdStartDate;
+            rgBulkAssignment.MasterTableView.GetColumn("BulkEndDate").HeaderText = PropertyLayer.GrdEndDate;
+            rgBulkAssignment.MasterTableView.GetColumn("BulkWorkLoad").HeaderText = PropertyLayer.GrdWorkload;
+
+
+        }
+
+        protected void rgDepartments_DataBinding(object sender, EventArgs e)
+        {
+            
+            rgDepartments.MasterTableView.GetColumn("DepartmentID").HeaderText = PropertyLayer.DepartmentID;
+
+            rgDepartments.MasterTableView.GetColumn("DepartmentName").HeaderText = PropertyLayer.DepartmentName;
+            rgDepartments.MasterTableView.GetColumn("ReportsTo").HeaderText = PropertyLayer.ReportTo;
+            rgDepartments.MasterTableView.GetColumn("Active").HeaderText = PropertyLayer.Status;
+        }
+
+        protected void rgResourceOnProjects_DataBinding(object sender, EventArgs e)
+        {
+
+            rgResourceOnProjects.MasterTableView.GetColumn("ResourceName").HeaderText = PropertyLayer.GrdAsingmentResourceName;
+            rgResourceOnProjects.MasterTableView.GetColumn("ProjectName").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            rgResourceOnProjects.MasterTableView.GetColumn("RoleName").HeaderText = PropertyLayer.RoleName;
+        }
+
+        protected void rgResourceInDepartment_DataBinding(object sender, EventArgs e)
+        {
+            rgResourceInDepartment.MasterTableView.GetColumn("ResourceName").HeaderText = PropertyLayer.GrdAsingmentResourceName;
+            rgResourceInDepartment.MasterTableView.GetColumn("DepartmentName").HeaderText = PropertyLayer.DepartmentName;
+
+        }
+
+        protected void rgResourceLeaves_DataBinding(object sender, EventArgs e)
+        {
+            rgResourceLeaves.MasterTableView.GetColumn("ResourceName").HeaderText = PropertyLayer.GrdAsingmentResourceName;
+            rgResourceLeaves.MasterTableView.GetColumn("BulkStartDate").HeaderText = PropertyLayer.BulkStartDate;
+
+            rgResourceLeaves.MasterTableView.GetColumn(" BulkEndDate").HeaderText = PropertyLayer.BulkEndDate;
+
         }
     }
 }
