@@ -129,11 +129,20 @@
   <data name="BulkStartDate" xml:space="preserve">
     <value>Массовая дата начала</value>
   </data>
+  <data name="CVLink" xml:space="preserve">
+    <value>РЕЗЮМЕ</value>
+  </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>Идентификатор отдела</value>
   </data>
   <data name="DepartmentName" xml:space="preserve">
     <value>название отдела</value>
+  </data>
+  <data name="Designation" xml:space="preserve">
+    <value>Обозначение:</value>
+  </data>
+  <data name="FullLoaded" xml:space="preserve">
+    <value>Полная загрузка:</value>
   </data>
   <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
     <value>Дата назначения</value>
@@ -162,17 +171,38 @@
   <data name="LabelTextYes" xml:space="preserve">
     <value>да</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>язык</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>название</value>
+  </data>
+  <data name="NoEmployee" xml:space="preserve">
+    <value>Нет сотрудников:</value>
+  </data>
+  <data name="Overloaded" xml:space="preserve">
+    <value>Перегруженный:</value>
+  </data>
+  <data name="PartiallyLoaded" xml:space="preserve">
+    <value>Частично загружен:</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль:</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Краткое описание проекта</value>
   </data>
   <data name="ReportTo" xml:space="preserve">
     <value>Сообщить в</value>
+  </data>
+  <data name="ResourceManager" xml:space="preserve">
+    <value>Менеджер ресурсов:</value>
   </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Резюме ресурса</value>
@@ -188,5 +218,26 @@
   </data>
   <data name="Status" xml:space="preserve">
     <value>Положение дел</value>
+  </data>
+  <data name="Streebo" xml:space="preserve">
+    <value>Streebo exp:</value>
+  </data>
+  <data name="TotalExp" xml:space="preserve">
+    <value>Всего опыта:</value>
+  </data>
+  <data name="Underloaded" xml:space="preserve">
+    <value>недогруженном:</value>
+  </data>
+  <data name="UtilizePersentage" xml:space="preserve">
+    <value>Процент использования (за выбранный период):</value>
+  </data>
+  <data name="UtilizePersentage4Week" xml:space="preserve">
+    <value>Процент использования (следующие 4 недели):</value>
+  </data>
+  <data name="UtlizePersonNext" xml:space="preserve">
+    <value>Процент использования (следующий</value>
+  </data>
+  <data name="weeks" xml:space="preserve">
+    <value>Недели):</value>
   </data>
 </root>

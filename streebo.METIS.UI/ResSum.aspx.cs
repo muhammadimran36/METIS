@@ -102,6 +102,24 @@ namespace streebo.METIS.UI
 
                     lblProjectSummary.Text = PropertyLayer.ProjectSummary;
                     lblAssignments.Text = PropertyLayer.Assignments;
+                    lbLogout.Text = PropertyLayer.Logout;
+                    LabelLanguage.Text = PropertyLayer.Language;
+
+
+                    Label6.Text = PropertyLayer.NoEmployee;
+                    //No.of Employees:
+                    Label8.Text = PropertyLayer.UtilizePersentage;
+                    //Utilization Percentage(For Selected Period):
+                    Label10.Text = PropertyLayer.UtilizePersentage4Week;
+                    //Utilization Percentage(Next 4 Weeks):
+                    Label1.Text = PropertyLayer.Overloaded;
+                    //Overloaded
+                    Label2.Text = PropertyLayer.PartiallyLoaded;
+                    //Partially Loaded
+                    Label3.Text = PropertyLayer.Underloaded;
+                    //Underloaded
+                    Label4.Text = PropertyLayer.FullLoaded;
+                    //Full Loaded
 
 
                     Boolean b_CanView = false;
@@ -1249,7 +1267,8 @@ namespace streebo.METIS.UI
 
             decimal talhaz = dt.Rows.Count > 0 && showWeekCount > 0 ? (decimal)Math.Round((z / ((showWeekCount) * dt.Rows.Count * 40)) * 100, 3) : 0;
             Label9.Text = Convert.ToString(talhaz) + " %";
-            Label10.Text = "Utilization Percentage (Next "+ showWeekCount +" Weeks):";
+            Label10.Text = PropertyLayer.UtlizePersonNext + " " + showWeekCount + " " + PropertyLayer.weeks;
+            //Label10.Text = "Utilization Percentage (Next " + showWeekCount + " Weeks):";
 
         }
         protected void Check(object sender, EventArgs e)

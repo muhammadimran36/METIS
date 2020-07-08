@@ -129,11 +129,20 @@
   <data name="BulkStartDate" xml:space="preserve">
     <value>Bulk Start Date</value>
   </data>
+  <data name="CVLink" xml:space="preserve">
+    <value>CV:</value>
+  </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>DepartmentID</value>
   </data>
   <data name="DepartmentName" xml:space="preserve">
     <value>Department Name</value>
+  </data>
+  <data name="Designation" xml:space="preserve">
+    <value>Designation:</value>
+  </data>
+  <data name="FullLoaded" xml:space="preserve">
+    <value>Full Loaded:</value>
   </data>
   <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
     <value>Date of Assignment</value>
@@ -162,17 +171,38 @@
   <data name="LabelTextYes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="NoEmployee" xml:space="preserve">
+    <value>No. of Employees:</value>
+  </data>
+  <data name="Overloaded" xml:space="preserve">
+    <value>Overloaded:</value>
+  </data>
+  <data name="PartiallyLoaded" xml:space="preserve">
+    <value>Partially Loaded:</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile:</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Project Summary</value>
   </data>
   <data name="ReportTo" xml:space="preserve">
     <value>Report To</value>
+  </data>
+  <data name="ResourceManager" xml:space="preserve">
+    <value>Resource Manager:</value>
   </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Resource Summary</value>
@@ -188,5 +218,26 @@
   </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
+  </data>
+  <data name="Streebo" xml:space="preserve">
+    <value>Streebo exp:</value>
+  </data>
+  <data name="TotalExp" xml:space="preserve">
+    <value>Total exp:</value>
+  </data>
+  <data name="Underloaded" xml:space="preserve">
+    <value>Underloaded:</value>
+  </data>
+  <data name="UtilizePersentage" xml:space="preserve">
+    <value>Utilization Percentage (For Selected Period):</value>
+  </data>
+  <data name="UtilizePersentage4Week" xml:space="preserve">
+    <value>Utilization Percentage (Next 4 Weeks):</value>
+  </data>
+  <data name="UtlizePersonNext" xml:space="preserve">
+    <value>Utilization Percentage (Next</value>
+  </data>
+  <data name="weeks" xml:space="preserve">
+    <value>Weeks):</value>
   </data>
 </root>

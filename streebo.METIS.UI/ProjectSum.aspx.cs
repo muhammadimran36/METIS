@@ -75,6 +75,8 @@ namespace streebo.METIS.UI
 
                     lblProjectSummary.Text = PropertyLayer.ProjectSummary;
                     lblAssignments.Text = PropertyLayer.Assignments;
+                    lbLogout.Text = PropertyLayer.Logout;
+                    LabelLanguage.Text = PropertyLayer.Language;
 
                     Boolean b_CanView = false;
 
@@ -278,6 +280,10 @@ namespace streebo.METIS.UI
                 GridNestedViewItem nestedItem = e.Item as GridNestedViewItem;
                 nestedItem.NestedViewCell.PreRender += new EventHandler(NestedViewCell_PreRender);
             }
+            //RadGrid_weekly.MasterTableView.GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+          //  RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            //RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("URole").HeaderText = PropertyLayer.RoleName;
+
 
 
         }
@@ -286,6 +292,7 @@ namespace streebo.METIS.UI
         {
             try
             {
+                
 
                 if (e.Item is GridHeaderItem && e.Item.OwnerTableView.Name == "DetailTable")
                 {
@@ -1906,6 +1913,11 @@ namespace streebo.METIS.UI
 
         }
         #endregion
+
+        protected void RadGrid_weekly_DataBinding(object sender, EventArgs e)
+        {
+            RadGrid_weekly.MasterTableView.GetColumn("PName").HeaderText = PropertyLayer.Name;
+        }
     }
 }
 

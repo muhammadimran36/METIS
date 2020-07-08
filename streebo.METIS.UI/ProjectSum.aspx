@@ -419,7 +419,7 @@
                 <span class="logout"><asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_OnClick" Font-Size="Smaller"
             Height="15px">Logout</asp:LinkButton></span>
 
-                    &nbsp;|&nbsp;  Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
+                    &nbsp;|&nbsp;  <asp:Label ID="LabelLanguage" runat="server" Text="Language:"></asp:Label> <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
                  <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
@@ -527,7 +527,7 @@
                 <!-- END: Filer Area -->
                 <telerik:RadGrid ID="RadGrid_weekly" runat="server" CellSpacing="0" Height="500px"
                 Skin="Office2007" GridLines="None" AllowSorting="True" OnDetailTableDataBind="RadGrid_weekly_DetailTableDataBind"
-                OnPreRender="RadGrid_weekly_PreRender" Width="99%" AutoGenerateColumns="false"
+                OnPreRender="RadGrid_weekly_PreRender" Width="99%" AutoGenerateColumns="false" OnDataBinding="RadGrid_weekly_DataBinding"
                 OnUpdateCommand="RadGrid_weekly_UpdateCommand" OnItemCreated="RadGrid_weekly_ItemCreated"
                 OnItemCommand="RadGrid_weekly_ItemCommand" OnItemDataBound="RadGrid_weekly_ItemDataBound">
                 <FilterMenu EnableImageSprites="False">
@@ -544,7 +544,7 @@
                     DataKeyNames="Project_id"  AlternatingItemStyle-CssClass="color1">
                     <CommandItemSettings ExportToPdfText="Export to PDF"></CommandItemSettings>
                      <Columns>
-                       <telerik:GridTemplateColumn HeaderText="Name" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
+                       <telerik:GridTemplateColumn HeaderText="Name" UniqueName="PName" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
                             DataField="Project" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains" HeaderStyle-Width="360px">
                             <ItemTemplate>
                                 <asp:Label ID="lblProject" runat="server"  Text='<%# Eval("Project") %>'></asp:Label>
@@ -710,7 +710,7 @@
                                 Visible="false">
                             </telerik:GridBoundColumn>
                            
-                            <telerik:GridTemplateColumn HeaderText="Name" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
+                            <telerik:GridTemplateColumn HeaderText="Name" UniqueName="UName" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
                                 DataField="Resource_name" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains">
                                 <ItemTemplate>
                                     <asp:HyperLink ID="targetControl1" runat="server" Text='<%# Eval("Resource_name") %>'></asp:HyperLink>

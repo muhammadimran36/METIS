@@ -51,7 +51,8 @@ namespace streebo.METIS.UI
                 LabelYes.Text = PropertyLayer.LabelTextYes;
                 LabelNo.Text = PropertyLayer.LabelTextNo;
                 CheckBox1.Text = PropertyLayer.ShowHistory;
-
+                lbLogout.Text = PropertyLayer.Logout;
+                LabelLanguage.Text = PropertyLayer.Language;
 
                 Boolean b_CanView = false;
 

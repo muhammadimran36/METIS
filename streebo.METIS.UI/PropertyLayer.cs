@@ -5,11 +5,12 @@ namespace streebo.METIS.UI
     public class PropertyLayer
     {
 
+
         public static string ResourceFileNameEN
         {
             get; set;
         }
-      //  public static string ResourceFileNameEN { get { return "ResourceRU"; }  set { } }
+        //  public static string ResourceFileNameEN { get { return "ResourceRU"; }  set { } }
 
         public static string ResourceSummary { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "ResourceSummary").ToString(); } }
 
@@ -20,7 +21,7 @@ namespace streebo.METIS.UI
 
         public static string AddNewRec { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "AddNewRec").ToString(); } }
 
-        public static string GrdAsingmentResourceName 
+        public static string GrdAsingmentResourceName
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "GrdAsingmentResourceName").ToString(); } }
 
         public static string GrdAsingmentDateOfAssignemnt
@@ -49,7 +50,7 @@ namespace streebo.METIS.UI
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Status").ToString(); } }
         public static string RoleName
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "RoleName").ToString(); } }
-        public static string BulkStartDate 
+        public static string BulkStartDate
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "BulkStartDate").ToString(); } }
 
         public static string BulkEndDate
@@ -70,5 +71,50 @@ namespace streebo.METIS.UI
 
         public static string Name
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Name").ToString(); } }
+
+        public static string Designation
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Designation").ToString(); } }
+        public static string Streebo
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Streebo").ToString(); } }
+        public static string TotalExp
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "TotalExp").ToString(); } }
+        public static string ResourceManager
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "ResourceManager").ToString(); } }
+        public static string CVLink
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "CVLink").ToString(); } }
+
+        public static string Profile
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Profile").ToString(); } }
+
+        public static string NoEmployee
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "NoEmployee").ToString(); } }
+        public static string UtilizePersentage
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "UtilizePersentage").ToString(); } }
+        public static string UtilizePersentage4Week
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "UtilizePersentage4Week").ToString(); } }
+        public static string Overloaded
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Overloaded").ToString(); } }
+        public static string PartiallyLoaded
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "PartiallyLoaded").ToString(); } }
+        public static string Underloaded
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Underloaded").ToString(); } }
+        public static string FullLoaded
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "FullLoaded").ToString(); } }
+
+        public static string UtlizePersonNext
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "UtlizePersonNext").ToString(); } }
+        public static string weeks
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "weeks").ToString(); } }
+
+        public static string Logout
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Logout").ToString(); } }
+
+
+        public static string Language
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Language").ToString(); } }
+
+        
+
+
     }
 }

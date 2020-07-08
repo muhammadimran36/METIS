@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CV:.
+        /// </summary>
+        internal static string CVLink {
+            get {
+                return ResourceManager.GetString("CVLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DepartmentID.
         /// </summary>
         internal static string DepartmentID {
@@ -111,6 +120,24 @@ namespace Resources {
         internal static string DepartmentName {
             get {
                 return ResourceManager.GetString("DepartmentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designation:.
+        /// </summary>
+        internal static string Designation {
+            get {
+                return ResourceManager.GetString("Designation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Loaded:.
+        /// </summary>
+        internal static string FullLoaded {
+            get {
+                return ResourceManager.GetString("FullLoaded", resourceCulture);
             }
         }
         
@@ -196,6 +223,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to images/metis_login.png.
         /// </summary>
         internal static string LoginIMG {
@@ -205,11 +241,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string Logout {
+            get {
+                return ResourceManager.GetString("Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Employees:.
+        /// </summary>
+        internal static string NoEmployee {
+            get {
+                return ResourceManager.GetString("NoEmployee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overloaded:.
+        /// </summary>
+        internal static string Overloaded {
+            get {
+                return ResourceManager.GetString("Overloaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partially Loaded:.
+        /// </summary>
+        internal static string PartiallyLoaded {
+            get {
+                return ResourceManager.GetString("PartiallyLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile:.
+        /// </summary>
+        internal static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
             }
         }
         
@@ -273,6 +354,69 @@ namespace Resources {
         internal static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Streebo exp:.
+        /// </summary>
+        internal static string Streebo {
+            get {
+                return ResourceManager.GetString("Streebo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total exp:.
+        /// </summary>
+        internal static string TotalExp {
+            get {
+                return ResourceManager.GetString("TotalExp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Underloaded:.
+        /// </summary>
+        internal static string Underloaded {
+            get {
+                return ResourceManager.GetString("Underloaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilization Percentage (For Selected Period):.
+        /// </summary>
+        internal static string UtilizePersentage {
+            get {
+                return ResourceManager.GetString("UtilizePersentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilization Percentage (Next 4 Weeks):.
+        /// </summary>
+        internal static string UtilizePersentage4Week {
+            get {
+                return ResourceManager.GetString("UtilizePersentage4Week", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilization Percentage (Next.
+        /// </summary>
+        internal static string UtlizePersonNext {
+            get {
+                return ResourceManager.GetString("UtlizePersonNext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weeks):.
+        /// </summary>
+        internal static string weeks {
+            get {
+                return ResourceManager.GetString("weeks", resourceCulture);
             }
         }
     }

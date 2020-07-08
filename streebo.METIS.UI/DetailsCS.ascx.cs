@@ -37,10 +37,38 @@ namespace streebo.METIS.UI
             ResourceView.DataSource = dt;
             ResourceView.DataBind();
 
+             
+
         }
 
         protected void ResourceView_DataBound(object sender, EventArgs e)
         {
+
+            Label lblDesignation = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblDesignation");
+            lblDesignation.Text = PropertyLayer.Designation;
+
+
+
+            Label lblStreebo = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblStreebo");
+            lblStreebo.Text = PropertyLayer.Streebo;
+
+
+            Label lblTotalExp = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblTotalExp");
+            lblTotalExp.Text = PropertyLayer.TotalExp;
+
+
+            Label lblResourceManager = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblResourceManager");
+            lblResourceManager.Text = PropertyLayer.ResourceManager;
+
+            Label lblCV_link = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblCV_link");
+            lblCV_link.Text = PropertyLayer.CVLink;
+
+
+
+            Label lblProfile = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblProfile");
+            lblProfile.Text = PropertyLayer.Profile;
+
+
             Image image = (System.Web.UI.WebControls.Image)ResourceView.FindControl("imgGenderIcon");
             Label gender = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblgender");
             //if (image == null) return;
@@ -79,7 +107,7 @@ namespace streebo.METIS.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
         }
     }
 }

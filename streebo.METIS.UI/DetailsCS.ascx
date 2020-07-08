@@ -29,21 +29,21 @@
                                 <asp:Label ID="ResourceName" runat="server"
                                     Style="font-weight: 700; color: #666666; font-size: medium;"><%# Eval("Resource_name")%></asp:Label>
                                 <br />
-                                <asp:Label ID="Label3" runat="server"
+                                <asp:Label ID="lblDesignation" runat="server"
                                     Style="color: #666666; font-size: small;">Designation: </asp:Label>
                                 &nbsp;<asp:Label ID="Designation" runat="server" Font-Size="Small"
                                     Style="color: #666666; text-decoration: underline;"><%# Eval("DESIGNATIONNAME")%></asp:Label>
                                 <br />
-                                <asp:Label ID="Label1" runat="server" Font-Size="Small" Style="color: #666666">Streebo exp: </asp:Label>
+                                <asp:Label ID="lblStreebo" runat="server" Font-Size="Small" Style="color: #666666">Streebo exp: </asp:Label>
                                 <asp:Label ID="TotExpStreebo" runat="server" Font-Size="Small"
                                     Style="color: #666666; text-decoration: underline;"><%# Eval("TotalStreeboExp")%></asp:Label>
                                 <br />
-                                <asp:Label ID="Label2" runat="server" Font-Size="Small" Style="color: #666666">Total exp: </asp:Label>
+                                <asp:Label ID="lblTotalExp" runat="server" Font-Size="Small" Style="color: #666666">Total exp: </asp:Label>
                                 &nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="TotExpIT" runat="server" Font-Size="Small"
                                     Style="color: #666666; text-decoration: underline;"><%# Eval("TotalITExp")%></asp:Label>
                                 <br />
-                                <asp:Label ID="Label4" runat="server"
+                                <asp:Label ID="lblResourceManager" runat="server"
                                     Style="color: #666666; font-size: small;">Resource Manager: </asp:Label>
                                 &nbsp;<asp:Label ID="Label5" runat="server" Font-Size="Small"
                                     Style="color: #666666; text-decoration: underline;"><%# Eval("Supervisor_name")%></asp:Label>

@@ -129,11 +129,20 @@
   <data name="BulkStartDate" xml:space="preserve">
     <value>Жаппай басталу күні</value>
   </data>
+  <data name="CVLink" xml:space="preserve">
+    <value>РЕЗЮМЕ</value>
+  </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>Бөлімнің жеке куәлігі</value>
   </data>
   <data name="DepartmentName" xml:space="preserve">
     <value>Бөлімнің атауы</value>
+  </data>
+  <data name="Designation" xml:space="preserve">
+    <value>Мақсаты:</value>
+  </data>
+  <data name="FullLoaded" xml:space="preserve">
+    <value>Толық жүктелген:</value>
   </data>
   <data name="GrdAsingmentDateOfAssignemnt" xml:space="preserve">
     <value>Тапсыру күні</value>
@@ -162,17 +171,38 @@
   <data name="LabelTextYes" xml:space="preserve">
     <value>Иә</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Тіл</value>
+  </data>
   <data name="LoginIMG" xml:space="preserve">
     <value>images/metis_login.png</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Шығу</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Аты</value>
+  </data>
+  <data name="NoEmployee" xml:space="preserve">
+    <value>Қызметкерлер саны:</value>
+  </data>
+  <data name="Overloaded" xml:space="preserve">
+    <value>Артық жүктелген:</value>
+  </data>
+  <data name="PartiallyLoaded" xml:space="preserve">
+    <value>Ішінара жүктелген:</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль:</value>
   </data>
   <data name="ProjectSummary" xml:space="preserve">
     <value>Жобаның қысқаша мазмұны</value>
   </data>
   <data name="ReportTo" xml:space="preserve">
     <value>Есеп беру</value>
+  </data>
+  <data name="ResourceManager" xml:space="preserve">
+    <value>Ресурс менеджері:</value>
   </data>
   <data name="ResourceSummary" xml:space="preserve">
     <value>Ресурстың қысқаша мазмұны</value>
@@ -188,5 +218,26 @@
   </data>
   <data name="Status" xml:space="preserve">
     <value>Күй</value>
+  </data>
+  <data name="Streebo" xml:space="preserve">
+    <value>Streebo exp:</value>
+  </data>
+  <data name="TotalExp" xml:space="preserve">
+    <value>Жалпы эксп:</value>
+  </data>
+  <data name="Underloaded" xml:space="preserve">
+    <value>Жүктелген:</value>
+  </data>
+  <data name="UtilizePersentage" xml:space="preserve">
+    <value>Пайдалану пайызы (таңдалған кезең үшін):</value>
+  </data>
+  <data name="UtilizePersentage4Week" xml:space="preserve">
+    <value>Пайдалану пайызы (Келесі 4 апта):</value>
+  </data>
+  <data name="UtlizePersonNext" xml:space="preserve">
+    <value>Пайдалану пайызы (Келесі</value>
+  </data>
+  <data name="weeks" xml:space="preserve">
+    <value>Апта):</value>
   </data>
 </root>

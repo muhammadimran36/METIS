@@ -465,7 +465,8 @@
                             class="logout"><asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_OnClick"
                                 Font-Size="Smaller" Height="15px">Logout</asp:LinkButton> </span>
 
-                   &nbsp;|&nbsp;  Language: <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
+                   &nbsp;|&nbsp;  <asp:Label ID="LabelLanguage" runat="server" Text="Language:" 
+                            ></asp:Label>  <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
                  <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
