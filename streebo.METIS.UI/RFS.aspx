@@ -130,7 +130,7 @@
                     <li><a tabindex="0" href="ResSum.aspx">Resource Summary</a></li>
                     <li><a tabindex="1" href="ProjectSum.aspx">Project Summary</a></li>
                     <li><a tabindex="2" href="Assignments.aspx">Assignments</a></li>
-                    <li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>
+                    <%--<li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>--%>
                     <li class="selected"><a tabindex="4" href="RFS.aspx">RFS</a></li>
                 </ul>
                 <!-- END: Menu -->
