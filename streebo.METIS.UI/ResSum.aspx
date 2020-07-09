@@ -647,7 +647,7 @@
                                         </telerik:GridEditCommandColumn>
                                         <telerik:GridTemplateColumn HeaderText="Project" UniqueName="UProject" DataField="Project" HeaderStyle-Width="220px">
                                             <ItemTemplate>
-                                                <asp:HyperLink runat="server" Text='<%# Eval("Project") %>'></asp:HyperLink>
+                                                <asp:HyperLink ID="LnkProject" runat="server" Text='<%# Eval("Project") %>'></asp:HyperLink>
                                             </ItemTemplate>
                                             <HeaderStyle Width="220px"></HeaderStyle>
                                         </telerik:GridTemplateColumn>

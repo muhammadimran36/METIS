@@ -50,6 +50,14 @@ namespace streebo.METIS.UI
                 LabelShowFilteringItem.Text = PropertyLayer.ShowFilterItemText;
                 LabelYes.Text = PropertyLayer.LabelTextYes;
                 LabelNo.Text = PropertyLayer.LabelTextNo;
+
+
+                lblFilterDown.Text = PropertyLayer.ShowFilterItemText;
+                lblYesDown.Text = PropertyLayer.LabelTextYes;
+                lblNoDown.Text = PropertyLayer.LabelTextNo;
+
+
+
                 CheckBox1.Text = PropertyLayer.ShowHistory;
                 lbLogout.Text = PropertyLayer.Logout;
                 LabelLanguage.Text = PropertyLayer.Language;

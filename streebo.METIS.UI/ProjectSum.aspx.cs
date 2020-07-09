@@ -1917,6 +1917,11 @@ namespace streebo.METIS.UI
         protected void RadGrid_weekly_DataBinding(object sender, EventArgs e)
         {
             RadGrid_weekly.MasterTableView.GetColumn("PName").HeaderText = PropertyLayer.Name;
+
+            RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("UResource").HeaderText = PropertyLayer.GrdAsingmentResourceName;
+            RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("URole").HeaderText = PropertyLayer.RoleName;
+
+
         }
     }
 }

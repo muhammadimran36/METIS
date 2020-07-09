@@ -231,6 +231,15 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadCodeBlock radCodeBlock6;
 
         /// <summary>
+        /// lblSHowFilterFooter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSHowFilterFooter;
+
+        /// <summary>
         /// Radio13 control.
         /// </summary>
         /// <remarks>
@@ -240,6 +249,15 @@ namespace streebo.METIS.UI
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio13;
 
         /// <summary>
+        /// lblYesFooter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblYesFooter;
+
+        /// <summary>
         /// Radio14 control.
         /// </summary>
         /// <remarks>
@@ -247,6 +265,15 @@ namespace streebo.METIS.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio14;
+
+        /// <summary>
+        /// lblFooterNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFooterNo;
 
         /// <summary>
         /// rgAssignmentHistory control.
@@ -510,6 +537,15 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadCodeBlock radCodeBlock7;
 
         /// <summary>
+        /// lblFilterDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFilterDown;
+
+        /// <summary>
         /// Radio15 control.
         /// </summary>
         /// <remarks>
@@ -519,6 +555,15 @@ namespace streebo.METIS.UI
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio15;
 
         /// <summary>
+        /// lblYesDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblYesDown;
+
+        /// <summary>
         /// Radio16 control.
         /// </summary>
         /// <remarks>
@@ -526,6 +571,15 @@ namespace streebo.METIS.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio16;
+
+        /// <summary>
+        /// lblNoDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNoDown;
 
         /// <summary>
         /// rgRoles control.

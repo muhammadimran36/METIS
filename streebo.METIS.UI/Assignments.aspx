@@ -282,11 +282,11 @@
 
                         </telerik:RadCodeBlock>
                         <div>
-                            Show filtering item
+                            <asp:Label ID="lblSHowFilterFooter" runat="server" Text="Show filtering item"></asp:Label>
                         <input id="Radio13" type="radio" runat="server" name="showHideGroup" checked="true"
-                            onclick="rgAssignmentshowFilterItem()" /><label for="Radio1">Yes</label>
+                            onclick="rgAssignmentshowFilterItem()" /><label for="Radio1"><asp:Label ID="lblYesFooter" runat="server" Text="Yes"></asp:Label></label>
                             <input id="Radio14" type="radio" runat="server" name="showHideGroup" onclick="rgAssignmenthideFilterItem()" /><label
-                                for="Radio2">No</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                for="Radio2"><asp:Label ID="lblFooterNo" runat="server" Text="No"></asp:Label></label>&nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
 
                         <telerik:RadGrid ID="rgAssignmentHistory" runat="server" GridLines="None" AllowPaging="True"
@@ -1089,11 +1089,11 @@
 
                         </telerik:RadCodeBlock>
                         <div>
-                            Show filtering item
+                            <asp:Label ID="lblFilterDown" runat="server" Text="Show filtering item"></asp:Label>
                         <input id="Radio15" type="radio" runat="server" name="showHideGroup" checked="true"
-                            onclick="rgRolesshowFilterItem()" /><label for="Radio1">Yes</label>
+                            onclick="rgRolesshowFilterItem()" /><label for="Radio1"><asp:Label ID="lblYesDown" runat="server" Text="Show filtering item"></asp:Label></label>
                             <input id="Radio16" type="radio" runat="server" name="showHideGroup" onclick="rgRoleshideFilterItem()" /><label
-                                for="Radio2">No</label>
+                                for="Radio2"><asp:Label ID="lblNoDown" runat="server" Text="Show filtering item"></asp:Label></label>
                         </div>
                         <telerik:RadGrid ID="rgRoles" runat="server" GridLines="None" AllowPaging="True"
                             AllowSorting="True" AutoGenerateColumns="False" Width="97%" OnNeedDataSource="rgRoles_NeedDataSource"
