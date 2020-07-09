@@ -393,6 +393,33 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadGrid rgCompResources;
 
         /// <summary>
+        /// divCompProjects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCompProjects;
+
+        /// <summary>
+        /// radCodeBlock9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadCodeBlock radCodeBlock9;
+
+        /// <summary>
+        /// rgCompProjects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid rgCompProjects;
+
+        /// <summary>
         /// divUpComingProjects control.
         /// </summary>
         /// <remarks>

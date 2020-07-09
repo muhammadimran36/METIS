@@ -245,6 +245,7 @@
                                                 ErrorMessage="Enter a Start Date!"></asp:RequiredFieldValidator>
                                         </EditItemTemplate>
                                     </telerik:GridTemplateColumn>
+
                                     <telerik:GridButtonColumn ConfirmText="Delete this Assignment ?" ConfirmDialogType="RadWindow"
                                         CommandName="Delete" ConfirmTitle="Delete" ButtonType="ImageButton" Text="Delete"
                                         UniqueName="DeleteColumn" HeaderStyle-Width="50px">
@@ -925,7 +926,7 @@
                                 <Selecting CellSelectionMode="None" AllowRowSelect="true"></Selecting>
                                 <KeyboardNavigationSettings AllowActiveRowCycle="true" FocusKey="RightArrow" AllowSubmitOnEnter="true" />
                             </ClientSettings>
-                            <MasterTableView AutoGenerateColumns="True" DataKeyNames="ResourceID"
+                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="employeeID"
                                 EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
                                 <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
@@ -939,6 +940,155 @@
                                         HeaderStyle-Width="50px">
                                         <HeaderStyle Width="50px"></HeaderStyle>
                                     </telerik:GridEditCommandColumn>
+                                    <telerik:GridTemplateColumn HeaderText="Resource Name" SortExpression="Resource_name" DataField="Resource_name" ItemStyle-Width="250px"
+                                    UniqueName="Resource_name">
+                                    <ItemTemplate>
+                                        <%# Eval("Resource_name")%>
+                                    </ItemTemplate>
+                                    <InsertItemTemplate>
+                                        <asp:TextBox ID="txtResource_name" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </InsertItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtResource_name" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </EditItemTemplate>
+
+                                    <ItemStyle Width="250px"></ItemStyle>
+                                </telerik:GridTemplateColumn>
+                                    <telerik:GridTemplateColumn HeaderText="Email" SortExpression="email" DataField="email" ItemStyle-Width="250px"
+                                    UniqueName="email">
+                                    <ItemTemplate>
+                                        <%# Eval("email")%>
+                                    </ItemTemplate>
+                                    <InsertItemTemplate>
+                                        <asp:TextBox ID="txtemail" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </InsertItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtemail" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </EditItemTemplate>
+
+                                    <ItemStyle Width="250px"></ItemStyle>
+                                </telerik:GridTemplateColumn>
+                                    <telerik:GridTemplateColumn HeaderText="Designation" SortExpression="DESIGNATIONNAME" DataField="DESIGNATIONNAME" ItemStyle-Width="250px"
+                                    UniqueName="DESIGNATIONNAME">
+                                    <ItemTemplate>
+                                        <%# Eval("DESIGNATIONNAME")%>
+                                    </ItemTemplate>
+                                    <InsertItemTemplate>
+                                        <asp:TextBox ID="txtDESIGNATIONNAME" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </InsertItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtDESIGNATIONNAME" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </EditItemTemplate>
+
+                                    <ItemStyle Width="250px"></ItemStyle>
+                                </telerik:GridTemplateColumn>
+                                    <%--<telerik:GridTemplateColumn UniqueName="Supervisor_name" HeaderText="Supervisor" SortExpression="Supervisor_name"
+                                        DataField="Supervisor_name" AllowFiltering="true" CurrentFilterFunction="Contains"
+                                        ShowFilterIcon="false" AutoPostBackOnFilter="true">
+                                        <ItemTemplate>
+                                            <%# Eval("Supervisor_name")%>
+                                        </ItemTemplate>
+                                        <InsertItemTemplate>
+                                            <asp:DropDownList ID="comSupervisor_name" runat="server" AppendDataBoundItems="true" CheckBoxes="true"></asp:DropDownList>
+                                            <asp:RequiredFieldValidator runat="server" ID="rfvcomSupervisor_name" ControlToValidate="comSupervisor_name"
+                                                ErrorMessage="Must Select One"></asp:RequiredFieldValidator>
+                                        </InsertItemTemplate>
+                                        <EditItemTemplate>
+                                            <asp:DropDownList ID="comSupervisor_name" runat="server" AppendDataBoundItems="true"></asp:DropDownList>
+                                            <asp:RequiredFieldValidator runat="server" ID="rfvcomSupervisor_name" ControlToValidate="comSupervisor_name"
+                                                ErrorMessage="Must Select One"></asp:RequiredFieldValidator>
+                                        </EditItemTemplate>
+                                    </telerik:GridTemplateColumn>--%>
+                                    
+                                    <telerik:GridButtonColumn ConfirmText="Delete this Resource ?" ConfirmDialogType="RadWindow"
+                                        CommandName="Delete" ConfirmTitle="Delete" ButtonType="ImageButton" Text="Delete"
+                                        UniqueName="DeleteColumn" HeaderStyle-Width="50px">
+                                        <ItemStyle HorizontalAlign="Center" CssClass="MyImageButton" />
+                                    </telerik:GridButtonColumn>
+                                </Columns>
+                                <EditFormSettings>
+                                    <EditColumn FilterControlAltText="Filter EditCommandColumn column">
+                                    </EditColumn>
+                                </EditFormSettings>
+                            </MasterTableView>
+                        </telerik:RadGrid>
+                    </div>
+                    <div id="divCompProjects" runat="server">
+                        <telerik:RadCodeBlock runat="server" ID="radCodeBlock9">
+
+                            <script type="text/javascript">
+                                function rgCompProjectsshowFilterItem() {
+                                    $find('<%=rgCompProjects.ClientID %>').get_masterTableView().showFilterItem();
+                            }
+                                function rgCompProjectshideFilterItem() {
+                                $find('<%=rgCompProjects.ClientID %>').get_masterTableView().hideFilterItem();
+                                }
+                            </script>
+
+                        </telerik:RadCodeBlock>
+                        
+                        <telerik:RadGrid ID="rgCompProjects" runat="server" GridLines="None" AllowPaging="True"
+                            AllowSorting="True" AutoGenerateColumns="True" Width="97%" OnNeedDataSource="rgCompProjects_NeedDataSource"
+                            OnDeleteCommand="rgCompProjects_DeleteCommand" OnInsertCommand="rgCompProjects_InsertCommand"
+                            OnUpdateCommand="rgCompProjects_UpdateCommand" EnableAJAX="True" OnItemCreated="rgCompProjects_ItemCreated"
+                            OnItemDataBound="rgCompProjects_ItemDataBound" OnItemCommand="rgCompProjects_ItemCommand"
+                            AllowFilteringByColumn="true" PageSize="50">
+                            <GroupingSettings CaseSensitive="false" />
+                            <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
+                            <FilterMenu EnableImageSprites="False">
+                            </FilterMenu>
+                            <ClientSettings AllowKeyboardNavigation="true">
+                                <Selecting CellSelectionMode="None" AllowRowSelect="true"></Selecting>
+                                <KeyboardNavigationSettings AllowActiveRowCycle="true" FocusKey="RightArrow" AllowSubmitOnEnter="true" />
+                            </ClientSettings>
+                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="PROJECT_ID"
+                                EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
+                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
+                                <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
+                                    <HeaderStyle Width="20px"></HeaderStyle>
+                                </RowIndicatorColumn>
+                                <ExpandCollapseColumn Visible="True" FilterControlAltText="Filter ExpandColumn column">
+                                    <HeaderStyle Width="20px"></HeaderStyle>
+                                </ExpandCollapseColumn>
+                                <Columns>
+                                    <telerik:GridEditCommandColumn ButtonType="ImageButton" UniqueName="EditCommandColumn"
+                                        HeaderStyle-Width="50px">
+                                        <HeaderStyle Width="50px"></HeaderStyle>
+                                    </telerik:GridEditCommandColumn>
+                                    <%--<telerik:GridTemplateColumn HeaderText="PROJECT ID" SortExpression="PROJECT_ID" DataField="PROJECT_ID" ItemStyle-Width="250px"
+                                    UniqueName="PROJECT_ID">
+                                    <ItemTemplate>
+                                        <%# Eval("PROJECT_ID")%>
+                                    </ItemTemplate>
+                                    <InsertItemTemplate>
+                                        <asp:TextBox ID="txtPROJECT_ID" name="txtPROJECT_ID" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </InsertItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtPROJECT_ID" name="editPROJECT_ID" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </EditItemTemplate>
+
+                                    <ItemStyle Width="250px"></ItemStyle>
+                                </telerik:GridTemplateColumn>--%>
+                                    <telerik:GridTemplateColumn HeaderText="Project Name" SortExpression="Project_name" DataField="Project_name" ItemStyle-Width="250px"
+                                    UniqueName="Project_name">
+                                    <ItemTemplate>
+                                        <%# Eval("Project_name")%>
+                                    </ItemTemplate>
+                                    <InsertItemTemplate>
+                                        <asp:TextBox ID="txtProject_name" name="txtProject_name" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </InsertItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox ID="txtProject_name" name="edittxtProject_name" Width="100%" runat="Server" Visible="true"></asp:TextBox>
+                                    </EditItemTemplate>
+
+                                    <ItemStyle Width="250px"></ItemStyle>
+                                </telerik:GridTemplateColumn>
+
+                                    <telerik:GridButtonColumn ConfirmText="Delete this Project ?" ConfirmDialogType="RadWindow"
+                                        CommandName="Delete" ConfirmTitle="Delete" ButtonType="ImageButton" Text="Delete"
+                                        UniqueName="DeleteColumn" HeaderStyle-Width="50px">
+                                        <ItemStyle HorizontalAlign="Center" CssClass="MyImageButton" />
+                                    </telerik:GridButtonColumn>
                                 </Columns>
                                 <EditFormSettings>
                                     <EditColumn FilterControlAltText="Filter EditCommandColumn column">

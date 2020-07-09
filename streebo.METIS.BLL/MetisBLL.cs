@@ -174,6 +174,11 @@ namespace streebo.METIS.BLL
             string query = string.Format("getAllResources");
             return conn.executeSelectStoredProcedure(query);
         }
+        public DataTable getAllCompanyProjects()
+        {
+            string query = string.Format("getAllProjects");
+            return conn.executeSelectStoredProcedure(query);
+        }
 
         public DataTable getAllResources(string user)
         {
@@ -183,6 +188,15 @@ namespace streebo.METIS.BLL
             sqlParameters[0] = new SqlParameter("@user", SqlDbType.VarChar,255);
             sqlParameters[0].Value = user;
             return conn.executeSelectStoredProcedure(query,sqlParameters);
+        }
+        public DataTable getAllCompanyResources(string user)
+        {
+            string query = string.Format("getAllCompanyResources");
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@user", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = user;
+            return conn.executeSelectStoredProcedure(query, sqlParameters);
         }
 
 
@@ -314,7 +328,68 @@ namespace streebo.METIS.BLL
                 return false;
             }
         }
+        public Boolean updateCompanyProject(string projectId, string projectName, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("UpdateCompanyProject");
+            SqlParameter[] sqlParameters = new SqlParameter[3];
 
+            sqlParameters[0] = new SqlParameter("@PROJECT_ID", SqlDbType.VarChar, 8000);
+            sqlParameters[0].Value = Convert.ToString(projectId);
+            sqlParameters[1] = new SqlParameter("@PROJECT_NAME", SqlDbType.VarChar, 255);
+            sqlParameters[1].Value = Convert.ToString(projectName);
+            sqlParameters[2] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[2].Direction = ParameterDirection.Output;
+            sqlParameters[2].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                { p_message = e.ToString(); }
+                else
+                { p_message = sp_return_message; }
+
+                return false;
+            }
+        }
+        public Boolean updateCompanyResource(string employeeId, string resourceName, string email, string designation, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("UpdateCompanyResource");
+            SqlParameter[] sqlParameters = new SqlParameter[5];
+
+            sqlParameters[0] = new SqlParameter("@employeeId", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = Convert.ToString(employeeId);
+            sqlParameters[1] = new SqlParameter("@resourceName", SqlDbType.VarChar, 255);
+            sqlParameters[1].Value = Convert.ToString(resourceName);
+            sqlParameters[2] = new SqlParameter("@email", SqlDbType.VarChar, 255);
+            sqlParameters[2].Value = Convert.ToString(email);
+            sqlParameters[3] = new SqlParameter("@designation", SqlDbType.VarChar, 255);
+            sqlParameters[3].Value = Convert.ToString(designation);
+            sqlParameters[4] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[4].Direction = ParameterDirection.Output;
+            sqlParameters[4].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                { p_message = e.ToString(); }
+                else
+                { p_message = sp_return_message; }
+
+                return false;
+            }
+        }
         public Boolean deleteResourceAssociation(string p_ResourceAssociationID, out string p_message)
         {
             string sp_return_message = "";
@@ -1279,11 +1354,11 @@ namespace streebo.METIS.BLL
             string query = string.Format("getAllArchiveActionItem");
             return conn.executeSelectStoredProcedure(query);
         }
-        public Boolean insertCompanyResource(string resourceName, DateTime joiningDate, bool status, string resourceID, out string p_message)
+        public Boolean insertCompanyResource(string resourceName, DateTime joiningDate, bool status, string employeeId,string email,string designation, out string p_message)
         {
             string sp_return_message = "";
             string query = string.Format("insertCompanyResource");
-            SqlParameter[] sqlParameters = new SqlParameter[5];
+            SqlParameter[] sqlParameters = new SqlParameter[7];
 
             
             sqlParameters[0] = new SqlParameter("@resourceName", SqlDbType.VarChar, 255);
@@ -1292,11 +1367,51 @@ namespace streebo.METIS.BLL
             sqlParameters[1].Value = joiningDate;
             sqlParameters[2] = new SqlParameter("@status", SqlDbType.Bit);
             sqlParameters[2].Value = status;
-            sqlParameters[3] = new SqlParameter("@resourceID", SqlDbType.VarChar, 255);
-            sqlParameters[3].Value = resourceID;
-            sqlParameters[4] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
-            sqlParameters[4].Direction = ParameterDirection.Output;
-            sqlParameters[4].Value = Convert.ToString(sp_return_message);
+            sqlParameters[3] = new SqlParameter("@employeeId", SqlDbType.VarChar, 255);
+            sqlParameters[3].Value = employeeId;
+            sqlParameters[4] = new SqlParameter("@email", SqlDbType.VarChar, 255);
+            sqlParameters[4].Value = email;
+            sqlParameters[5] = new SqlParameter("@designation", SqlDbType.VarChar, 255);
+            sqlParameters[5].Value = designation;
+            sqlParameters[6] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[6].Direction = ParameterDirection.Output;
+            sqlParameters[6].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeInsertStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                {
+                    p_message = e.ToString();
+                }
+                else
+                {
+                    p_message = sp_return_message;
+                }
+                return false;
+            }
+        }
+
+        public Boolean insertCompanyProject(string projectName,string projectId, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("insertCompanyProject");
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+
+
+            sqlParameters[0] = new SqlParameter("@Project_name", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = projectName;
+
+            sqlParameters[1] = new SqlParameter("@Project_id", SqlDbType.VarChar,8000);
+            sqlParameters[1].Value = projectId;
+           
+            sqlParameters[2] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[2].Direction = ParameterDirection.Output;
+            sqlParameters[2].Value = Convert.ToString(sp_return_message);
 
             try
             {
@@ -1424,6 +1539,62 @@ namespace streebo.METIS.BLL
 
             sqlParameters[0] = new SqlParameter("@id", SqlDbType.Int);
             sqlParameters[0].Value = p_ID;
+
+            sqlParameters[1] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[1].Direction = ParameterDirection.Output;
+            sqlParameters[1].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                { p_message = e.ToString(); }
+                else
+                { p_message = sp_return_message; }
+
+                return false;
+            }
+        }
+        public Boolean deleteCompanyProject(string p_ID, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("deleteCompanyProject");
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@id", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = p_ID;
+
+            sqlParameters[1] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
+            sqlParameters[1].Direction = ParameterDirection.Output;
+            sqlParameters[1].Value = Convert.ToString(sp_return_message);
+
+            try
+            {
+                conn.executeStoredProcedure(query, sqlParameters, out p_message);
+                return true;
+            }
+            catch (Exception e)
+            {
+                if (sp_return_message == "")
+                { p_message = e.ToString(); }
+                else
+                { p_message = sp_return_message; }
+
+                return false;
+            }
+        }
+        public Boolean deleteCompanyResource(string employeeId, out string p_message)
+        {
+            string sp_return_message = "";
+            string query = string.Format("deleteCompanyResource");
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@id", SqlDbType.VarChar, 255);
+            sqlParameters[0].Value = employeeId;
 
             sqlParameters[1] = new SqlParameter("@ReturnMessage", SqlDbType.VarChar, 255);
             sqlParameters[1].Direction = ParameterDirection.Output;
