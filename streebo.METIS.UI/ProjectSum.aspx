@@ -422,7 +422,7 @@
                     &nbsp;|&nbsp;  <asp:Label ID="LabelLanguage" runat="server" Text="Language:"></asp:Label> <asp:DropDownList ID="DropDownListLanguage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListLanguage_SelectedIndexChanged">
                 <asp:ListItem Value="English" Text="English"></asp:ListItem>
                 <asp:ListItem Value="Russian" Text="Russian"></asp:ListItem>
-                 <asp:ListItem Value="kazakh" Text="kazakh"></asp:ListItem>
+                 <asp:ListItem Value="kazakh" Text="Kazakh"></asp:ListItem>
                       </asp:DropDownList>
 
             </div>
@@ -438,7 +438,7 @@
                	<li><a tabindex="0" href="ResSum.aspx"><asp:Label ID="lblResourceSummary" runat="server" Text="Label"></asp:Label></a></li>
                 <li class="selected"><a tabindex="1" href="ProjectSum.aspx"><asp:Label ID="lblProjectSummary" runat="server" Text="Label"></asp:Label></a></li>
                 <li><a tabindex="2" href="Assignments.aspx"><asp:Label ID="lblAssignments" runat="server" Text="Label"></asp:Label></a></li>
-                <li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li>   
+                <%--<li><a tabindex="3" href="UpComingProj.aspx">Upcoming Projects</a></li> --%>  
                 <%--<li id="RFSs" runat="server" ><a tabindex="4" href="RFS.aspx">RFS</a></li>--%>
             </ul>
             <!-- END: Menu -->
