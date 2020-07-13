@@ -941,7 +941,8 @@
                                         <HeaderStyle Width="50px"></HeaderStyle>
                                     </telerik:GridEditCommandColumn>
                                     <telerik:GridTemplateColumn HeaderText="Resource Name" SortExpression="Resource_name" DataField="Resource_name" ItemStyle-Width="250px"
-                                    UniqueName="Resource_name">
+                                    UniqueName="Resource_name" AllowFiltering="true" CurrentFilterFunction="Contains"
+                                        ShowFilterIcon="false" AutoPostBackOnFilter="true">
                                     <ItemTemplate>
                                         <%# Eval("Resource_name")%>
                                     </ItemTemplate>
@@ -955,7 +956,8 @@
                                     <ItemStyle Width="250px"></ItemStyle>
                                 </telerik:GridTemplateColumn>
                                     <telerik:GridTemplateColumn HeaderText="Email" SortExpression="email" DataField="email" ItemStyle-Width="250px"
-                                    UniqueName="email">
+                                    UniqueName="email" AllowFiltering="true" CurrentFilterFunction="Contains"
+                                        ShowFilterIcon="false" AutoPostBackOnFilter="true">
                                     <ItemTemplate>
                                         <%# Eval("email")%>
                                     </ItemTemplate>
@@ -969,7 +971,8 @@
                                     <ItemStyle Width="250px"></ItemStyle>
                                 </telerik:GridTemplateColumn>
                                     <telerik:GridTemplateColumn HeaderText="Designation" SortExpression="DESIGNATIONNAME" DataField="DESIGNATIONNAME" ItemStyle-Width="250px"
-                                    UniqueName="DESIGNATIONNAME">
+                                    UniqueName="DESIGNATIONNAME" AllowFiltering="true" CurrentFilterFunction="Contains"
+                                        ShowFilterIcon="false" AutoPostBackOnFilter="true">
                                     <ItemTemplate>
                                         <%# Eval("DESIGNATIONNAME")%>
                                     </ItemTemplate>
@@ -1070,7 +1073,8 @@
                                     <ItemStyle Width="250px"></ItemStyle>
                                 </telerik:GridTemplateColumn>--%>
                                     <telerik:GridTemplateColumn HeaderText="Project Name" SortExpression="Project_name" DataField="Project_name" ItemStyle-Width="250px"
-                                    UniqueName="Project_name">
+                                    UniqueName="Project_name" AllowFiltering="true" CurrentFilterFunction="Contains"
+                                        ShowFilterIcon="false" AutoPostBackOnFilter="true">
                                     <ItemTemplate>
                                         <%# Eval("Project_name")%>
                                     </ItemTemplate>
