@@ -106,6 +106,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ресурстарды бөлуді көрсету.
+        /// </summary>
+        internal static string DDLShowResourceAll {
+            get {
+                return ResourceManager.GetString("DDLShowResourceAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ресурстың қол жетімділігін көрсету.
+        /// </summary>
+        internal static string DDLShowResourceAvail {
+            get {
+                return ResourceManager.GetString("DDLShowResourceAvail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Бөлімнің жеке куәлігі.
         /// </summary>
         internal static string DepartmentID {

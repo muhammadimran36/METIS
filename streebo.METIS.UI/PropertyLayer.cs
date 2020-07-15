@@ -4,7 +4,7 @@ namespace streebo.METIS.UI
 {
     public class PropertyLayer
     {
-
+       
 
         public static string ResourceFileNameEN
         {
@@ -113,8 +113,11 @@ namespace streebo.METIS.UI
         public static string Language
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "Language").ToString(); } }
 
-        
+        public static string DDLShowResourceAvail
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "DDLShowResourceAvail").ToString(); } }
 
+        public static string DDLShowResourceAll
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "DDLShowResourceAll").ToString(); } }
 
     }
 }

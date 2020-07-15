@@ -106,6 +106,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show Resource Allocation.
+        /// </summary>
+        internal static string DDLShowResourceAll {
+            get {
+                return ResourceManager.GetString("DDLShowResourceAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Resource Availability.
+        /// </summary>
+        internal static string DDLShowResourceAvail {
+            get {
+                return ResourceManager.GetString("DDLShowResourceAvail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DepartmentID.
         /// </summary>
         internal static string DepartmentID {

@@ -120,7 +120,7 @@ namespace streebo.METIS.UI
                     //Underloaded
                     Label4.Text = PropertyLayer.FullLoaded;
                     //Full Loaded
-
+                    FillDDL();
 
                     Boolean b_CanView = false;
 
@@ -203,6 +203,16 @@ namespace streebo.METIS.UI
                 Console.WriteLine(ex.StackTrace);
             }
     }
+
+        private void FillDDL()
+        {
+
+            ddlResourceView.Items.Clear();
+            ddlResourceView.Items.Add(new ListItem(PropertyLayer.DDLShowResourceAll, "1"));
+            ddlResourceView.Items.Add(new ListItem(PropertyLayer.DDLShowResourceAvail, "2"));
+
+
+        }
 
         protected int GetNoOfWeeks(DateTime start, DateTime end)
         {

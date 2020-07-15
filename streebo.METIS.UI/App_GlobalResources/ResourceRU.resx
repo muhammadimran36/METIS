@@ -132,6 +132,12 @@
   <data name="CVLink" xml:space="preserve">
     <value>РЕЗЮМЕ</value>
   </data>
+  <data name="DDLShowResourceAll" xml:space="preserve">
+    <value>Ресурстарды бөлуді көрсету</value>
+  </data>
+  <data name="DDLShowResourceAvail" xml:space="preserve">
+    <value>Ресурстың қол жетімділігін көрсету</value>
+  </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>Идентификатор отдела</value>
   </data>

@@ -72,15 +72,15 @@ namespace streebo.METIS.UI
             Image image = (System.Web.UI.WebControls.Image)ResourceView.FindControl("imgGenderIcon");
             Label gender = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblgender");
             //if (image == null) return;
-            image.ImageUrl = "employeImages/" + resourceId + ".jpg";
+            image.ImageUrl = "Metis/employeImages/" + resourceId + ".jpg";
 
             if (gender.Text == "F")
             {
-                image.Attributes.Add("onerror", "this.src='../employeImages/female.jpg';");
+                image.Attributes.Add("onerror", "this.src='../Metis/employeImages/female.jpg';");
             }
             else
             {
-                image.Attributes.Add("onerror", "this.src='../employeImages/male.jpg';");                
+                image.Attributes.Add("onerror", "this.src='../Metis/employeImages/male.jpg';");                
             }
 
             //Label lblCV_link = (System.Web.UI.WebControls.Label)ResourceView.FindControl("lblCV_link");
