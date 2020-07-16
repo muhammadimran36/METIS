@@ -51,7 +51,7 @@
                             <asp:ListItem>Assign Department</asp:ListItem>
                             <asp:ListItem>Assign Resource To Project</asp:ListItem>
                             <asp:ListItem>Mark Leaves</asp:ListItem>
-                            <asp:ListItem>Roles</asp:ListItem>
+                            
                             <asp:ListItem>Add Project</asp:ListItem>
                             <asp:ListItem>Add Resource</asp:ListItem>
                         </asp:DropDownList>
