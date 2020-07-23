@@ -177,6 +177,42 @@ namespace streebo.METIS.UI
         protected global::System.Web.UI.WebControls.Label lblAssignments;
 
         /// <summary>
+        /// DivMainContentDashboard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivMainContentDashboard;
+
+        /// <summary>
+        /// LinkButtonBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonBack;
+
+        /// <summary>
+        /// ImageBAck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageBAck;
+
+        /// <summary>
+        /// DivMainContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivMainContent;
+
+        /// <summary>
         /// comResource control.
         /// </summary>
         /// <remarks>
@@ -274,6 +310,24 @@ namespace streebo.METIS.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgRefresh;
+
+        /// <summary>
+        /// ButtonDashboard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ButtonDashboard;
+
+        /// <summary>
+        /// ImageDashboard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageDashboard;
 
         /// <summary>
         /// btnExpandAll control.

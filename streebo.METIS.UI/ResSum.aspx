@@ -490,7 +490,34 @@
                 </ul>
                 <!-- END: Menu -->
                 <!-- START: content -->
-                <div class="contentPanel">
+
+                 <div class="contentPanel" runat="server" id="DivMainContentDashboard" visible="false">
+
+                      <table border="0" cellspacing="5" cellpadding="5" width="100%">
+                          <tr>
+                              <td  style="float:right">
+
+                                  <asp:LinkButton ID="LinkButtonBack" runat="server" OnClick="LinkButtonBack_Click" ToolTip="Back">
+                                        <asp:Image ID="ImageBAck" runat="server" ImageUrl="images/BAck.png" Width="25px"
+                                            Height="21px" BorderWidth="0" />
+                                    </asp:LinkButton>
+                              </td>
+                          </tr>
+                      </table>
+                     
+                      <table border="0" cellspacing="5" cellpadding="5" width="100%">
+                          <tr>
+                              <td>
+
+                                   <br /><br /><br />
+                     put ifram here
+                              </td>
+                          </tr>
+                      </table>
+
+                    
+                 </div>
+                <div class="contentPanel" runat="server" id="DivMainContent">
                     <!-- START: Filer Area -->
                     <div class="filter">
                         <table border="0" cellspacing="5" cellpadding="5" width="100%">
@@ -591,7 +618,12 @@
                                         <asp:Image ID="imgRefresh" runat="server" ImageUrl="images/icon_referesh.png" Width="25px"
                                             Height="21px" BorderWidth="0" />
                                     </asp:LinkButton>
-                                    <%-- <a href="#"><img src="./image/icon_referesh.png" width="25" height="21" border="0"></a>--%>
+                                   </td>
+                                <td align="right" width="20">
+                                    <asp:LinkButton ID="ButtonDashboard" runat="server" OnClick="ButtonDashboard_Click" ToolTip="Dashboard">
+                                        <asp:Image ID="ImageDashboard" runat="server" ImageUrl="images/BIIcon.png" Width="25px"
+                                            Height="21px" BorderWidth="0" />
+                                    </asp:LinkButton>
                                 </td>
                             </tr>
                             <tr>

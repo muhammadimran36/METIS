@@ -2956,5 +2956,17 @@ namespace streebo.METIS.UI
 
 
         }
+
+        protected void ButtonDashboard_Click(object sender, EventArgs e)
+        {
+            DivMainContent.Visible = false;
+            DivMainContentDashboard.Visible = true;
+        }
+
+        protected void LinkButtonBack_Click(object sender, EventArgs e)
+        {
+            DivMainContent.Visible = true;
+            DivMainContentDashboard.Visible = false;
+        }
     }
 }
