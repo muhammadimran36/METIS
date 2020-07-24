@@ -296,11 +296,17 @@ namespace streebo.METIS.UI
                     // Sarfaraz 02Jan19
                     // Added following code to load resources in grid based on selected department and selected Resource.
                     // When user come back from other tab, combo shows selected department but the resources in grid are not filtered based on selected department.
+
+                   
+
                     Session["ResourceList"] = dt.Columns[1]; 
 
                     DataView dv = new DataView(dt);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+
+                    dv.RowFilter += "AND Resource_id <> 31";
+
                     Session["dview"] = dv;
                     RadGrid_weekly.DataSource = dv;
                     showUtilizationPercentage(dv.ToTable());
@@ -411,6 +417,7 @@ namespace streebo.METIS.UI
                     DataView dv = new DataView(dtable);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                    dv.RowFilter += "AND Resource_id <> 31";
                     Session["dview"] = dv;
                     RadGrid_weekly.DataSource = dv;
                 }
@@ -422,7 +429,7 @@ namespace streebo.METIS.UI
                     DataView dv = new DataView(dtable);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
-
+                    dv.RowFilter += "AND Resource_id <> 31";
                     if (chkavailres.Checked)
                     {
                         WeekHeaderCount = 0;
@@ -1097,6 +1104,8 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                dv.RowFilter += "AND Resource_id <> 31";
+
                 RadGrid_weekly.DataSource = dv;
                 RadGrid_weekly.Rebind();
                 Label7.Visible = true;
@@ -1111,6 +1120,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                dv.RowFilter += "AND Resource_id <> 31";
                 Label7.Visible = false;
                 Label8.Visible = false;
                 Label9.Visible = false;
@@ -1147,6 +1157,7 @@ namespace streebo.METIS.UI
                     DataView dv = new DataView(dtable);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                    dv.RowFilter += "AND Resource_id <> 31";
                     // Sarfaraz 14 Dec18:
                     // Issue after selection of resource if date changes, it reset to all resources.
                     // fix is datagrid needs to be binded with dv;
@@ -1204,7 +1215,7 @@ namespace streebo.METIS.UI
                     DataView dv = new DataView(dtable);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
-
+                    dv.RowFilter += "AND Resource_id <> 31";
                     if (chkavailres.Checked)
                     {
                         WeekHeaderCount = 0;
@@ -1308,6 +1319,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                dv.RowFilter += "AND Resource_id <> 31";
                 RadGrid_weekly.DataSource = dv;
                 RadGrid_weekly.Rebind();
 
@@ -1335,7 +1347,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
-
+                dv.RowFilter += "AND Resource_id <> 31";
                 WeekHeaderCount = 0;
                 while (WeekHeaderCount < NoOfWeeks)
                 {
@@ -1437,6 +1449,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                dv.RowFilter += "AND Resource_id <> 31";
                 RadGrid_weekly.DataSource = dv;
                 RadGrid_weekly.Rebind();
 
@@ -1447,7 +1460,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
-
+                dv.RowFilter += "AND Resource_id <> 31";
                 if (chkavailres.Checked)
                 {
                     WeekHeaderCount = 0;
@@ -1481,6 +1494,7 @@ namespace streebo.METIS.UI
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
 
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
+                    dv.RowFilter += "AND Resource_id <> 31";
                     RadGrid_weekly.DataSource = objBLL.getResourceSummary((DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate, Session["user"].ToString());
 
                     RadGrid_weekly.Rebind();
@@ -1597,7 +1611,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.ToString().Replace("'", "''") == "All" ? "" : comDepartment.Text.ToString().Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.ToString().Replace("'", "''") == "All" ? "" : comResource.Text.ToString().Replace("'", "''")) + "%'";
-
+                dv.RowFilter += "AND Resource_id <> 31";
                 if (chkavailres.Checked)
                 {
                     WeekHeaderCount = 0;
@@ -1677,6 +1691,7 @@ namespace streebo.METIS.UI
                     DataView dv = new DataView(dtable);
                     dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.Replace("'", "''") == "All" ? "" : comDepartment.Text.Replace("'", "''")) + "%'";
                     dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.Replace("'", "''") == "All" ? "" : comResource.Text.Replace("'", "''")) + "%'";
+                    dv.RowFilter += "AND Resource_id <> 31";
                     RadGrid_weekly.DataSource = dv;
                     DataTable dtt = new DataTable();
                     dtt = dv.ToTable();
@@ -1732,7 +1747,7 @@ namespace streebo.METIS.UI
                 DataView dv = new DataView(dtable);
                 dv.RowFilter = "Dept_name like '%" + (comDepartment.Text.Replace("'", "''") == "All" ? "" : comDepartment.Text.Replace("'", "''")) + "%'";
                 dv.RowFilter += "AND Resource_name LIKE '%" + (comResource.Text.Replace("'", "''") == "All" ? "" : comResource.Text.Replace("'", "''")) + "%'";
-
+                dv.RowFilter += "AND Resource_id <> 31";
                 if (chkavailres.Checked)
                 {
                     WeekHeaderCount = 0;

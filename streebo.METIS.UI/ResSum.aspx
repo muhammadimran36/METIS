@@ -509,8 +509,8 @@
                           <tr>
                               <td>
 
-                                   <br /><br /><br />
-                     put ifram here
+                     <iframe width="100%" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiYmYzOWE3MmMtZmQzMy00YTIwLWIzNzctNjE5N2M3ZDM1MGM4IiwidCI6IjAyNmUwNTg1LTBmNmQtNGViMi1iYTkzLThjNGE0ZDQ4ODNjNCIsImMiOjN9&pageName=ReportSection4a9bd4878497a403251a" frameborder="0" allowFullScreen="true"></iframe>
+
                               </td>
                           </tr>
                       </table>
@@ -619,7 +619,7 @@
                                             Height="21px" BorderWidth="0" />
                                     </asp:LinkButton>
                                    </td>
-                                <td align="right" width="20" style="display:none;">
+                                <td align="right" width="20">
                                     <asp:LinkButton ID="ButtonDashboard" runat="server" OnClick="ButtonDashboard_Click" ToolTip="Dashboard">
                                         <asp:Image ID="ImageDashboard" runat="server" ImageUrl="images/BIIcon.png" Width="25px"
                                             Height="21px" BorderWidth="0" />
