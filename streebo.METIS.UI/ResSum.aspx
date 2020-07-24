@@ -619,7 +619,7 @@
                                             Height="21px" BorderWidth="0" />
                                     </asp:LinkButton>
                                    </td>
-                                <td align="right" width="20">
+                                <td align="right" width="20" style="display:none;">
                                     <asp:LinkButton ID="ButtonDashboard" runat="server" OnClick="ButtonDashboard_Click" ToolTip="Dashboard">
                                         <asp:Image ID="ImageDashboard" runat="server" ImageUrl="images/BIIcon.png" Width="25px"
                                             Height="21px" BorderWidth="0" />
