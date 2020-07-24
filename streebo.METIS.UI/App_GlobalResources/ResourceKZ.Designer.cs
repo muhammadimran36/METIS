@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тек қол жетімді ресурстарды көрсету.
+        /// </summary>
+        internal static string CheckBoxText {
+            get {
+                return ResourceManager.GetString("CheckBoxText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to РЕЗЮМЕ.
         /// </summary>
         internal static string CVLink {

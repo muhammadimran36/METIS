@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Показать только доступный ресурс.
+        /// </summary>
+        internal static string CheckBoxText {
+            get {
+                return ResourceManager.GetString("CheckBoxText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to РЕЗЮМЕ.
         /// </summary>
         internal static string CVLink {

@@ -129,6 +129,9 @@
   <data name="BulkStartDate" xml:space="preserve">
     <value>Массовая дата начала</value>
   </data>
+  <data name="CheckBoxText" xml:space="preserve">
+    <value>Показать только доступный ресурс</value>
+  </data>
   <data name="CVLink" xml:space="preserve">
     <value>РЕЗЮМЕ</value>
   </data>

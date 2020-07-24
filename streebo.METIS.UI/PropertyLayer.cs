@@ -119,5 +119,8 @@ namespace streebo.METIS.UI
         public static string DDLShowResourceAll
         { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "DDLShowResourceAll").ToString(); } }
 
+        public static string CheckBoxText
+        { get { return HttpContext.GetGlobalResourceObject(PropertyLayer.ResourceFileNameEN, "CheckBoxText").ToString(); } }
+
     }
 }

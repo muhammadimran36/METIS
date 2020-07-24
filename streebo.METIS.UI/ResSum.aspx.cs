@@ -104,7 +104,7 @@ namespace streebo.METIS.UI
                     lblAssignments.Text = PropertyLayer.Assignments;
                     lbLogout.Text = PropertyLayer.Logout;
                     LabelLanguage.Text = PropertyLayer.Language;
-
+                    chkavailres.Text = PropertyLayer.CheckBoxText;
 
                     Label6.Text = PropertyLayer.NoEmployee;
                     //No.of Employees:
@@ -956,18 +956,19 @@ namespace streebo.METIS.UI
             objBLL = new MetisBLL();
             DataTable dtable = objBLL.getAllResourcesWithEmail();
 
-            foreach (DataRow row in dtable.Rows)
-            {
-                lstResourceWithEmail.Add(row[1].ToString() + "@Streebo.com", row[0].ToString());
-            }
+          //  foreach (DataRow row in dtable.Rows)
+          //  {
+           //     lstResourceWithEmail.Add(row[1].ToString() + "@Streebo.com", row[0].ToString());
+            //}
 
-            foreach (DataRowView drv in dv)
-            {
-                if (FindKeyByValue(lstResourceWithEmail, drv[1].ToString()) != "")
-                    email.To.Add(FindKeyByValue(lstResourceWithEmail, drv[1].ToString()));
-            }
+           // foreach (DataRowView drv in dv)
+           // {
+               // if (FindKeyByValue(lstResourceWithEmail, drv[1].ToString()) != "")
+                   // email.To.Add(FindKeyByValue(lstResourceWithEmail, drv[1].ToString()));
+           // }
 
-            email.CC.Add(cc);
+            email.To.Add("dildar.ali@qordata.com");
+           //email.CC.Add(cc);
             email.Body = body;
             email.Subject = subject;
             email.IsBodyHtml = isHtml;

@@ -129,6 +129,9 @@
   <data name="BulkStartDate" xml:space="preserve">
     <value>Bulk Start Date</value>
   </data>
+  <data name="CheckBoxText" xml:space="preserve">
+    <value>Show only available resource</value>
+  </data>
   <data name="CVLink" xml:space="preserve">
     <value>CV:</value>
   </data>
