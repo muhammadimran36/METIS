@@ -515,7 +515,31 @@ namespace streebo.METIS.UI
 
                 objBLL = new MetisBLL();
                 DataTable dtable = objBLL.getProjectDetail(lblResourceID.Text, (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
-                e.DetailTableView.DataSource = dtable;
+
+                DataTable NewDtable = dtable.Clone();
+
+               
+
+                for (int i = 0; i < dtable.Rows.Count; i++)
+                {
+                    bool addRow = false;
+                    for (int j = 0; j < dtable.Columns.Count; j++)
+                    {
+                        if (j >= 5)
+                        {
+                            object o = dtable.Rows[i].ItemArray[j];
+                            if (o.ToString() != "") { addRow = true; break; }
+                            //if you want to get the string
+                            //string s = o = dt.Rows[i].ItemArray[j].ToString();
+                        }
+                    }
+
+                    if (addRow) NewDtable.Rows.Add(dtable.Rows[i].ItemArray);
+                    
+                }
+
+
+                e.DetailTableView.DataSource = NewDtable;
                 rowsInDetailTable = dtable.Rows.Count;
                 columnsInDetailTable = dtable.Columns.Count;
                 hideRowCounter = 0;
