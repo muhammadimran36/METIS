@@ -956,7 +956,7 @@ namespace streebo.METIS.UI
 
             MailMessage email = new MailMessage();
             email.From = new MailAddress("metis.streebo@gmail.com", "Streebo Metis");
-            email.ReplyTo = new MailAddress(cc);
+          //  email.ReplyTo = new MailAddress(cc);
 
             Dictionary<string, string> lstResourceWithEmail = new Dictionary<string, string>();
 
@@ -974,20 +974,21 @@ namespace streebo.METIS.UI
                    // email.To.Add(FindKeyByValue(lstResourceWithEmail, drv[1].ToString()));
            // }
 
-            email.To.Add("dildar.ali@qordata.com");
-           //email.CC.Add(cc);
+            email.To.Add("talha.aziz@qordata.com");
+           email.CC.Add("mohsin.hussain@qordata.com");
             email.Body = body;
             email.Subject = subject;
             email.IsBodyHtml = isHtml;
             email.Attachments.Add(new Attachment(attachmentStream, fileName));
 
-            SmtpClient smtp = new SmtpClient("localhost", 587);
-            smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address  
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+           // smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address  
             smtp.Credentials = new System.Net.NetworkCredential
                  ("metis.streebo@gmail.com", "Inbox@1234");
-            //Or your Smtp Email ID and Password  
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.EnableSsl = true;
+            //Or your Smtp Email ID and Password  
+           // smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+           // smtp.EnableSsl = true;
             smtp.Send(email);
         }
         
