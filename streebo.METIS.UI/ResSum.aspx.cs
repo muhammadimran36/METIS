@@ -986,7 +986,7 @@ namespace streebo.METIS.UI
             smtp.Credentials = new System.Net.NetworkCredential
                  ("metis.streebo@gmail.com", "Inbox@1234");
             smtp.EnableSsl = true;
-            //Or your Smtp Email ID and Password  
+            //Or your Smtp Email ID and Password //
            // smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
            // smtp.EnableSsl = true;
             smtp.Send(email);
