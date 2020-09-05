@@ -400,7 +400,10 @@ namespace streebo.METIS.UI
                 objBLL = new MetisBLL();
                 //DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(((string)Session["Resource_id"])), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
 
-                DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(((string)Session["Resource_id"])), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+                  DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(((string)Session["Resource_id"])), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+
+              //  DataTable dtable = objBLL.getResourceDetail(9123, (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+
                 RadGrid_weekly.DataSource = dtable;
             }
             else
@@ -808,7 +811,7 @@ namespace streebo.METIS.UI
                 }
 
                     e.DetailTableView.DataSource = NewDtable;
-                rowsInDetailTable = dtable.Rows.Count;
+                rowsInDetailTable = NewDtable.Rows.Count;
                 hideRowCounter = 0;
                 
              }

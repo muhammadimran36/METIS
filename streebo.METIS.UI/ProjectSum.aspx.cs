@@ -540,8 +540,8 @@ namespace streebo.METIS.UI
 
 
                 e.DetailTableView.DataSource = NewDtable;
-                rowsInDetailTable = dtable.Rows.Count;
-                columnsInDetailTable = dtable.Columns.Count;
+                rowsInDetailTable = NewDtable.Rows.Count;
+                columnsInDetailTable = NewDtable.Columns.Count;
                 hideRowCounter = 0;
                 hideColumnCounter = 0;
 
