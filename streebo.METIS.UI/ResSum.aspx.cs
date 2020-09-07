@@ -1595,6 +1595,9 @@ namespace streebo.METIS.UI
                     DataTable dtt = new DataTable();
                     dtt = objBLL.getResourceSummary((DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate, email);
                     showUtilizationPercentage(dtt);
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "validation", "javascript: __doPostBack('lnkRefresh', '')", true);
+                
+                    //Response.Redirect("ResSum.aspx");
                     /*
                         decimal t = 0;
                         decimal z = 0;

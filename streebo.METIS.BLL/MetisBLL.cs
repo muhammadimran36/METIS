@@ -9,7 +9,7 @@ using streebo.core.DAL;
 using System.CodeDom.Compiler; //
 using System.Reflection; //
 using Microsoft.CSharp; //
-
+using System.Collections;
 
 namespace streebo.METIS.BLL
 {
@@ -445,7 +445,8 @@ namespace streebo.METIS.BLL
             sqlParameters[1].Value = WeekEnding;
             sqlParameters[2] = new SqlParameter("@user", SqlDbType.VarChar,255);
             sqlParameters[2].Value = user;
-            return conn.executeSelectStoredProcedure(query, sqlParameters);
+            return RemoveDuplicateRows(conn.executeSelectStoredProcedure(query, sqlParameters), "Resource_name");
+
         }
 
         public DataTable getResourceDetailById(string id)
@@ -536,7 +537,41 @@ namespace streebo.METIS.BLL
             sqlParameters[1].Value = WeekEnding;
             sqlParameters[2] = new SqlParameter("@user", SqlDbType.VarChar,255);
             sqlParameters[2].Value = user;
-            return conn.executeSelectStoredProcedure(query, sqlParameters);
+
+
+            return RemoveDuplicateRows(conn.executeSelectStoredProcedure(query, sqlParameters),"Project");
+        }
+
+        public DataTable RemoveDuplicateRows(DataTable table, string DistinctColumn)
+        {
+            try
+            {
+                ArrayList UniqueRecords = new ArrayList();
+                ArrayList DuplicateRecords = new ArrayList();
+
+                // Check if records is already added to UniqueRecords otherwise,
+                // Add the records to DuplicateRecords
+                foreach (DataRow dRow in table.Rows)
+                {
+                    if (UniqueRecords.Contains(dRow[DistinctColumn]))
+                        DuplicateRecords.Add(dRow);
+                    else
+                        UniqueRecords.Add(dRow[DistinctColumn]);
+                }
+
+                // Remove duplicate rows from DataTable added to DuplicateRecords
+                foreach (DataRow dRow in DuplicateRecords)
+                {
+                    table.Rows.Remove(dRow);
+                }
+
+                // Return the clean DataTable which contains unique records.
+                return table;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         //public DataTable getProjectSummary(DateTime WeekStarting, DateTime WeekEnding)
         //{

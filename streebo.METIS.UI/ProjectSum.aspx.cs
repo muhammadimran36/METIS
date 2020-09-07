@@ -210,10 +210,14 @@ namespace streebo.METIS.UI
                 case "RadGrid_Weekly":
 
                     DataTable dtable = objBLL.getProjectSummary((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5), Session["user"].ToString());
+
                     RadGrid_weekly.DataSource = dtable;
                     break;
             }
         }
+
+       
+
 
         protected DateTime GetDateInCurrentWeek(DayOfWeek dw)
         {
@@ -652,7 +656,7 @@ namespace streebo.METIS.UI
                 //dv2.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
 
                 // Dd code for color
-                 
+                 /*
                 NoOfWeeks = GetNoOfWeeks((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5));
                  iWeekHeaderCount = 0;
                 Weekending_array = new string[NoOfWeeks];
