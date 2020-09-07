@@ -386,6 +386,7 @@ namespace streebo.METIS.UI
                             string headerName = Weekending_array[iWeekHeaderCount];
                             if (dataBoundItem[headerName].Text != "&nbsp;")
                             {
+                                
 
                                 if (Convert.ToDouble(dataBoundItem[headerName].Text) >= 40.1)
                                 {
@@ -514,7 +515,10 @@ namespace streebo.METIS.UI
                 lblResourceID.Text = parentItem["Project_id"].Text;
 
                 objBLL = new MetisBLL();
-                DataTable dtable = objBLL.getProjectDetail(lblResourceID.Text, (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+
+               // ((DateTime)dpEnding.SelectedDate).AddDays(5);
+
+                DataTable dtable = objBLL.getProjectDetail(lblResourceID.Text, (DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(7));
 
                 DataTable NewDtable = dtable.Clone();
 
@@ -540,8 +544,10 @@ namespace streebo.METIS.UI
 
 
                 e.DetailTableView.DataSource = NewDtable;
+                //e.DetailTableView.DataBind();
                 rowsInDetailTable = NewDtable.Rows.Count;
-                columnsInDetailTable = NewDtable.Columns.Count;
+                //columnsInDetailTable = NewDtable.Columns.Count;
+               
                 hideRowCounter = 0;
                 hideColumnCounter = 0;
 
@@ -639,13 +645,63 @@ namespace streebo.METIS.UI
                 objBLL = new MetisBLL();
                 DataTable dtable = objBLL.getProjectSummary((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5), Session["user"].ToString());
                 DataView dv = new DataView(dtable);
-              
+              DataView dv2 = new DataView(dtable);
+               
                 dv.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
+
+                //dv2.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
+
+                // Dd code for color
+                 
+                NoOfWeeks = GetNoOfWeeks((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5));
+                 iWeekHeaderCount = 0;
+                Weekending_array = new string[NoOfWeeks];
+
+                WeekStarting = (DateTime)dpWeekStarting.SelectedDate;
                 
+                htWeekEndings = new Hashtable(NoOfWeeks);
+                for (int i = 0; i < NoOfWeeks; i++)
+                {
+
+                    Weekending_array[i] = WeekStarting.ToString("dd") + " " + WeekStarting.ToString("MMM") + " " + WeekStarting.ToString("yyyy");
+                    WeekStarting = WeekStarting.AddDays(7);
+
+                }
+                while (iWeekHeaderCount < NoOfWeeks)
+                  {
+                     string headerName = Weekending_array[iWeekHeaderCount];
+                    dv.RowFilter += "AND [" + headerName + "] > 0";
+                    iWeekHeaderCount++;
+                   }
+               
+                
+                //  Weekending_array = new string[NoOfWeeks];               
+                //htWeekEndings = new Hashtable(NoOfWeeks);
+
+                // iWeekHeaderCount = 0;
+                //  while (iWeekHeaderCount < NoOfWeeks)
+                //  {
+                //     string headerName = Weekending_array[iWeekHeaderCount];
+                //    dv2.RowFilter += "AND [" + headerName + "] > 0";
+                //    iWeekHeaderCount++;
+                //   }
+                // Dd code for color
+                /*
+                
+                Weekending_array = new string[NoOfWeeks];
+               
+                htWeekEndings = new Hashtable(NoOfWeeks);
+                 iWeekHeaderCount = 0;
+                  while (iWeekHeaderCount < NoOfWeeks)
+                  {
+                     string headerName = Weekending_array[iWeekHeaderCount];
+                    dv.RowFilter += "AND [" + headerName + "] > 0";
+                    iWeekHeaderCount++;
+                   }
+                   */
+
                 RadGrid_weekly.DataSource = dv;
                 RadGrid_weekly.Rebind();
-
-
             }
             catch (Exception ex)
             {
@@ -653,7 +709,6 @@ namespace streebo.METIS.UI
 
             }
         }
-
          protected void Calendar_OnDayRender(object sender, Telerik.Web.UI.Calendar.DayRenderEventArgs e)
          {
              try

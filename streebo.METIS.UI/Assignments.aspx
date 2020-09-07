@@ -42,7 +42,12 @@
                 <!-- START: content -->
                 <div class="contentPanel">
                     <!-- content start -->
-
+                    <div style="float: right; padding-bottom:10px; padding-right: 40px;">
+                                    <asp:LinkButton ID="lnkRefresh" runat="server" OnClick="lnkRefresh_Click" ToolTip="Refresh">
+                                        <asp:Image ID="imgRefresh" runat="server" ImageUrl="images/icon_referesh.png" Width="25px"
+                                            Height="21px" BorderWidth="0" />
+                                    </asp:LinkButton>
+                            </div>
                     <div id="divSelection" runat="server">
                         <asp:DropDownList ID="ddlSelection" runat="server" OnSelectedIndexChanged="ddlSelection_SelectedIndexChanged"
                             AutoPostBack="True" TabIndex="3">
@@ -55,6 +60,7 @@
                             <asp:ListItem>Add Project</asp:ListItem>
                             <asp:ListItem>Add Resource</asp:ListItem>
                         </asp:DropDownList>
+
                         <telerik:RadScriptManager ID="radScriptMgr" runat="server">
                             <Scripts>
                                 <%--Needed for JavaScript IntelliSense in VS2010--%>
@@ -67,7 +73,10 @@
                         <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" />
+
                     </div>
+                     
+
                     <%--Needed for JavaScript IntelliSense in VS2010--%><asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="true"
                         OnCheckedChanged="CheckBox1_CheckedChanged" Text="Show History" />
                     <div id="divBulkAssignment" runat="server">
@@ -91,7 +100,13 @@
                             onclick="rgBulkAssignmentshowFilterItem()" /><label for="Radio1"><asp:Label ID="LabelYes" runat="server" Text="Yes"></asp:Label></label>
                             <input id="Radio8" type="radio" runat="server" name="showHideGroup" onclick="rgBulkAssignmenthideFilterItem()" /><label
                                 for="Radio2"><asp:Label ID="LabelNo" runat="server" Text="No"></asp:Label></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            
+
                         </div>
+
+                       
+
                         <telerik:RadDatePicker ID="RadDatePicker1" Style="display: none;" MinDate="01/01/1900"
                             MaxDate="12/31/2100" runat="server">
                         </telerik:RadDatePicker>
@@ -111,7 +126,7 @@
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="BulkAssignmentID" EditMode="InPlace"
                                 CommandItemDisplay="Top" >
                                 <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new record"
-                                    ShowAddNewRecordButton="true"></CommandItemSettings>
+                                    ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -309,7 +324,7 @@
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="BulkAssignmentID" EditMode="InPlace"
                                 CommandItemDisplay="Top">
                                 <CommandItemSettings  ExportToPdfText="Export to PDF"  AddNewRecordText="Add new record" 
-                                    ShowAddNewRecordButton="true"></CommandItemSettings>
+                                    ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -492,7 +507,7 @@
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="ResourceLeaveHeaderID" EditMode="InPlace"
                                 CommandItemDisplay="Top">
                                 <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new record"
-                                    ShowAddNewRecordButton="true"></CommandItemSettings>
+                                    ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -629,7 +644,7 @@
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="DepartmentID" EditMode="InPlace"
                                 CommandItemDisplay="Top" AllowFilteringByColumn="True">
-                                <CommandItemSettings ExportToPdfText="Export to PDF"></CommandItemSettings>
+                                <CommandItemSettings ExportToPdfText="Export to PDF" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -850,8 +865,8 @@
                                 <KeyboardNavigationSettings AllowActiveRowCycle="true" FocusKey="RightArrow" AllowSubmitOnEnter="true" />
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="ResourceAssociationID"
-                                EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
-                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
+                                EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true" >
+                                <CommandItemSettings ShowRefreshButton="false" ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -936,7 +951,7 @@
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="false" DataKeyNames="employeeID"
                                 EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
-                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
+                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -1054,7 +1069,7 @@
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="false" DataKeyNames="PROJECT_ID"
                                 EditMode="InPlace" CommandItemDisplay="Top" AllowFilteringByColumn="true">
-                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true"></CommandItemSettings>
+                                <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new Record" ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -1158,7 +1173,7 @@
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="pkID" EditMode="InPlace"
                                 CommandItemDisplay="Top">
                                 <CommandItemSettings ExportToPdfText="Export to PDF" AddNewRecordText="Add new record"
-                                    ShowAddNewRecordButton="true"></CommandItemSettings>
+                                    ShowAddNewRecordButton="true" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>
@@ -1317,7 +1332,7 @@
                             </ClientSettings>
                             <MasterTableView AutoGenerateColumns="False" DataKeyNames="DepartmentID" EditMode="InPlace"
                                 CommandItemDisplay="Top" AllowFilteringByColumn="True">
-                                <CommandItemSettings ExportToPdfText="Export to PDF"></CommandItemSettings>
+                                <CommandItemSettings ExportToPdfText="Export to PDF" ShowRefreshButton="false"></CommandItemSettings>
                                 <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
                                     <HeaderStyle Width="20px"></HeaderStyle>
                                 </RowIndicatorColumn>

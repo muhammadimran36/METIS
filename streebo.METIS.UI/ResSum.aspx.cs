@@ -1013,9 +1013,17 @@ namespace streebo.METIS.UI
                  ("metis.streebo@gmail.com", "Inbox@1234");
             smtp.EnableSsl = true;
             //Or your Smtp Email ID and Password //
-           // smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-           // smtp.EnableSsl = true;
-            smtp.Send(email);
+            // smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            // smtp.EnableSsl = true;
+            try
+            {
+                smtp.Send(email);
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
         }
         
         public string FindKeyByValue<TKey, TValue>(IDictionary<TKey, TValue> dictionary, TValue value)

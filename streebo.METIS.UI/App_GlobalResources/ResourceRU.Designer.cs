@@ -115,7 +115,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ресурстарды бөлуді көрсету.
+        ///   Looks up a localized string similar to Показать распределение ресурсов.
         /// </summary>
         internal static string DDLShowResourceAll {
             get {
@@ -124,7 +124,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ресурстың қол жетімділігін көрсету.
+        ///   Looks up a localized string similar to Показать доступность ресурсов.
         /// </summary>
         internal static string DDLShowResourceAvail {
             get {

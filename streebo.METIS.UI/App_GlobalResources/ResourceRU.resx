@@ -136,10 +136,10 @@
     <value>РЕЗЮМЕ</value>
   </data>
   <data name="DDLShowResourceAll" xml:space="preserve">
-    <value>Ресурстарды бөлуді көрсету</value>
+    <value>Показать распределение ресурсов</value>
   </data>
   <data name="DDLShowResourceAvail" xml:space="preserve">
-    <value>Ресурстың қол жетімділігін көрсету</value>
+    <value>Показать доступность ресурсов</value>
   </data>
   <data name="DepartmentID" xml:space="preserve">
     <value>Идентификатор отдела</value>

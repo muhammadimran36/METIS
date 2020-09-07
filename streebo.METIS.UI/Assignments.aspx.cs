@@ -2797,5 +2797,10 @@ namespace streebo.METIS.UI
             rgResourceLeaves.MasterTableView.GetColumn(" BulkEndDate").HeaderText = PropertyLayer.BulkEndDate;
 
         }
+
+        protected void lnkRefresh_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Assignments.aspx");
+        }
     }
 }
