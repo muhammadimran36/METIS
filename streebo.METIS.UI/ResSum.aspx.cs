@@ -400,11 +400,12 @@ namespace streebo.METIS.UI
                 objBLL = new MetisBLL();
                 //DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(((string)Session["Resource_id"])), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
 
-                  DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32(((string)Session["Resource_id"])), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+                DataTable dtable = objBLL.getResourceDetail(Convert.ToInt32((string)Session["Resource_id"]), (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
 
-              //  DataTable dtable = objBLL.getResourceDetail(9123, (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
+                //DataTable dtable = objBLL.getResourceDetail(9123, (DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
 
                 RadGrid_weekly.DataSource = dtable;
+               
             }
             else
             {
@@ -539,7 +540,7 @@ namespace streebo.METIS.UI
                         {
                             string headerName = Weekending_array[iWeekDetailHeaderCount];
 
-                            if (false && item[headerName].Text == "&nbsp;"&&false)
+                            if (false && item[headerName].Text == "&nbsp;")
                             {
                                 emptyCellsCounter++;
                                 if (emptyCellsCounter == NoOfWeeks)
@@ -698,6 +699,7 @@ namespace streebo.METIS.UI
         {
             try
             {
+                e.Item.OwnerTableView.ParentItem.OwnerTableView.Rebind();
 
                 if (e.Item.OwnerTableView.Name == "DetailTable")
                 {
@@ -752,6 +754,7 @@ namespace streebo.METIS.UI
 
         protected void RadGrid_weekly_ItemCommand(object sender, GridCommandEventArgs e)
         {
+            
             if (e.CommandName == "InitInsert" && e.Item.OwnerTableView.Name == "MasterTable")
             {
                 e.Canceled = true;
@@ -811,6 +814,7 @@ namespace streebo.METIS.UI
                 }
 
                     e.DetailTableView.DataSource = NewDtable;
+                //e.DetailTableView.Rebind();
                 rowsInDetailTable = NewDtable.Rows.Count;
                 hideRowCounter = 0;
                 
@@ -3021,6 +3025,17 @@ namespace streebo.METIS.UI
         {
             DivMainContent.Visible = true;
             DivMainContentDashboard.Visible = false;
+        }
+
+        protected void lnkRefresh_Click(object sender, EventArgs e)
+        {
+
+            Session["isLogin"] = 0;
+            Session["user"] = String.Empty;
+            
+            Session["user"] = "salman.kasbati";
+            Session["isLogin"] = 1;
+            Response.Redirect("ResSum.aspx");
         }
     }
 }

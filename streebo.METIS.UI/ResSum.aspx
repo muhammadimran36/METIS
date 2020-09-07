@@ -614,7 +614,7 @@
                                         ID="btnExport" ImageUrl="images/excelicon.png" Width="25px" Height="21px" ToolTip="Export"></asp:ImageButton>
                                 </td>
                                 <td align="right" width="20">
-                                    <asp:LinkButton ID="lnkRefresh" runat="server" OnClick="Refresh" ToolTip="Refresh">
+                                    <asp:LinkButton ID="lnkRefresh" runat="server" OnClick="lnkRefresh_Click" ToolTip="Refresh">
                                         <asp:Image ID="imgRefresh" runat="server" ImageUrl="images/icon_referesh.png" Width="25px"
                                             Height="21px" BorderWidth="0" />
                                     </asp:LinkButton>
@@ -655,9 +655,9 @@
                         </ClientSettings>
                         <%--Start of --%>
                         <MasterTableView Name="MasterTable" Width="99%" HeaderStyle-Width="60px" AutoGenerateColumns="true"
-                            HeaderStyle-Wrap="false" HeaderStyle-Font-Size="Smaller" TableLayout="Fixed"
+                            HeaderStyle-Wrap="false" HeaderStyle-Font-Size="Smaller" TableLayout="Fixed" 
                             DataKeyNames="Resource_id" AlternatingItemStyle-CssClass="color1" ClientDataKeyNames="Resource_id">
-                            <CommandItemSettings ExportToPdfText="Export to PDF"></CommandItemSettings>
+                            <CommandItemSettings ExportToPdfText="Export to PDF" ></CommandItemSettings>
                             <Columns>
                                 <telerik:GridTemplateColumn HeaderText="Name" UniqueName="UName" SortExpression="Resource_name" FilterControlAltText="Filter Resource_name column"
                                     DataField="Resource_name" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains"
@@ -671,7 +671,7 @@
                             <DetailTables>
                                 <telerik:GridTableView runat="server" DataKeyNames="Project_id" CommandItemDisplay="None"
                                     EditMode="InPlace" TabIndex="-1" Name="DetailTable" Width="98%" AutoGenerateColumns="true" 
-                                    HeaderStyle-Font-Size="Smaller" ShowHeadersWhenNoRecords="false">
+                                    HeaderStyle-Font-Size="Smaller" ShowHeadersWhenNoRecords="false" CommandItemSettings-ShowRefreshButton="true">
                                     <Columns>
                                         <telerik:GridEditCommandColumn ButtonType="ImageButton" UniqueName="EditCommandColumn"
                                             HeaderStyle-Width="40px">

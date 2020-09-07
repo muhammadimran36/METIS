@@ -283,9 +283,14 @@ namespace streebo.METIS.UI
             {
                 GridNestedViewItem nestedItem = e.Item as GridNestedViewItem;
                 nestedItem.NestedViewCell.PreRender += new EventHandler(NestedViewCell_PreRender);
+
+                
+
             }
+
+            
             //RadGrid_weekly.MasterTableView.GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
-          //  RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
+            //  RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("UProject").HeaderText = PropertyLayer.GrdAsingmentProjectName;
             //RadGrid_weekly.MasterTableView.DetailTables[0].GetColumn("URole").HeaderText = PropertyLayer.RoleName;
 
 
@@ -549,6 +554,9 @@ namespace streebo.METIS.UI
 
                 e.DetailTableView.DataSource = NewDtable;
                 //e.DetailTableView.DataBind();
+
+                
+
                 rowsInDetailTable = NewDtable.Rows.Count;
                 //columnsInDetailTable = NewDtable.Columns.Count;
                
@@ -2029,6 +2037,13 @@ namespace streebo.METIS.UI
 
         protected void lnkRefresh_Click(object sender, EventArgs e)
         {
+
+            Session["isLogin"] = 0;
+            Session["user"] = String.Empty;
+
+            Session["user"] = "salman.kasbati";
+            Session["isLogin"] = 1;
+            
             Response.Redirect("ProjectSum.aspx");
         }
 
