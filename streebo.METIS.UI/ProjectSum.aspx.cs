@@ -393,7 +393,12 @@ namespace streebo.METIS.UI
                         while (iWeekHeaderCount < NoOfWeeks)
                         {
                             string headerName = Weekending_array[iWeekHeaderCount];
-                            if (dataBoundItem[headerName].Text != "&nbsp;")
+
+                            dataBoundItem[headerName].BackColor = System.Drawing.ColorTranslator.FromHtml("#7F3887");
+                            dataBoundItem[headerName].ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+                            dataBoundItem[headerName].Style.Add("font-weight", "bold");
+
+                            if (false && dataBoundItem[headerName].Text != "&nbsp;")
                             {
                                 
 
