@@ -510,6 +510,16 @@
                         </td>
                         
                         <td>&nbsp;</td>
+
+                          <td>
+                              <div style="float: right; padding-bottom:10px; padding-right: 40px;">
+                                    <asp:LinkButton ID="lnkRefresh" runat="server" OnClick="lnkRefresh_Click" ToolTip="Refresh">
+                                        <asp:Image ID="imgRefresh" runat="server" ImageUrl="images/icon_referesh.png" Width="25px"
+                                            Height="21px" BorderWidth="0" />
+                                    </asp:LinkButton>
+                            </div>
+
+                          </td>
                         <%--<td align="right"><a href="#"><img src="./image/icon_referesh.png" width="25" height="21" border="0"></a></td>--%>
                       </tr>
                       <tr>

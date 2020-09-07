@@ -2002,6 +2002,13 @@ namespace streebo.METIS.UI
 
 
         }
+
+
+        protected void lnkRefresh_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProjectSum.aspx");
+        }
+
     }
 }
 

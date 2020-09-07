@@ -231,6 +231,24 @@ namespace streebo.METIS.UI
         protected global::Telerik.Web.UI.RadComboBox cmbReportType;
 
         /// <summary>
+        /// lnkRefresh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkRefresh;
+
+        /// <summary>
+        /// imgRefresh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgRefresh;
+
+        /// <summary>
         /// btnExpandAll control.
         /// </summary>
         /// <remarks>
