@@ -539,7 +539,7 @@ namespace streebo.METIS.UI
                         {
                             string headerName = Weekending_array[iWeekDetailHeaderCount];
 
-                            if (item[headerName].Text == "&nbsp;")
+                            if (false && item[headerName].Text == "&nbsp;"&&false)
                             {
                                 emptyCellsCounter++;
                                 if (emptyCellsCounter == NoOfWeeks)

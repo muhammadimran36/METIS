@@ -336,7 +336,7 @@ namespace streebo.METIS.UI
                             {
                                 string headerName = Weekending_array[iWeekDetailHeaderCount];
 
-                                if (item[headerName].Text == "&nbsp;")
+                                if (false && item[headerName].Text == "&nbsp;")
                                 {
                                     emptyCellsCounter++;
                                     if (emptyCellsCounter == NoOfWeeks)
@@ -653,17 +653,16 @@ namespace streebo.METIS.UI
                
                 dv.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
 
-                //dv2.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
 
-                // Dd code for color
-                 /*
-                NoOfWeeks = GetNoOfWeeks((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5));
-                 iWeekHeaderCount = 0;
+                #region Preparing Hashtable
+                /// Weekending_array = new string[NoOfWeeks];
+                // htWeekEndings = new Hashtable(NoOfWeeks);
+                NoOfWeeks = GetNoOfWeeks((DateTime)dpWeekStarting.SelectedDate, (DateTime)dpEnding.SelectedDate);
                 Weekending_array = new string[NoOfWeeks];
-
-                WeekStarting = (DateTime)dpWeekStarting.SelectedDate;
-                
                 htWeekEndings = new Hashtable(NoOfWeeks);
+                #endregion
+                WeekStarting = (DateTime)dpWeekStarting.SelectedDate;
+                #region Preparing WeekEndings
                 for (int i = 0; i < NoOfWeeks; i++)
                 {
 
@@ -671,38 +670,58 @@ namespace streebo.METIS.UI
                     WeekStarting = WeekStarting.AddDays(7);
 
                 }
-                while (iWeekHeaderCount < NoOfWeeks)
-                  {
-                     string headerName = Weekending_array[iWeekHeaderCount];
-                    dv.RowFilter += "AND [" + headerName + "] > 0";
-                    iWeekHeaderCount++;
-                   }
-               
-                
-                //  Weekending_array = new string[NoOfWeeks];               
-                //htWeekEndings = new Hashtable(NoOfWeeks);
+                #endregion
 
-                // iWeekHeaderCount = 0;
-                //  while (iWeekHeaderCount < NoOfWeeks)
-                //  {
-                //     string headerName = Weekending_array[iWeekHeaderCount];
-                //    dv2.RowFilter += "AND [" + headerName + "] > 0";
-                //    iWeekHeaderCount++;
-                //   }
+                //dv2.RowFilter = "Project LIKE '%" + (ddlProject.SelectedItem.ToString().Replace("'", "''") == "All" ? "" : ddlProject.SelectedItem.ToString().Replace("'", "''")) + "%'";
+
                 // Dd code for color
                 /*
-                
-                Weekending_array = new string[NoOfWeeks];
-               
-                htWeekEndings = new Hashtable(NoOfWeeks);
-                 iWeekHeaderCount = 0;
-                  while (iWeekHeaderCount < NoOfWeeks)
-                  {
-                     string headerName = Weekending_array[iWeekHeaderCount];
-                    dv.RowFilter += "AND [" + headerName + "] > 0";
-                    iWeekHeaderCount++;
-                   }
-                   */
+               NoOfWeeks = GetNoOfWeeks((DateTime)dpWeekStarting.SelectedDate, ((DateTime)dpEnding.SelectedDate).AddDays(5));
+                iWeekHeaderCount = 0;
+               Weekending_array = new string[NoOfWeeks];
+
+               WeekStarting = (DateTime)dpWeekStarting.SelectedDate;
+
+               htWeekEndings = new Hashtable(NoOfWeeks);
+               for (int i = 0; i < NoOfWeeks; i++)
+               {
+
+                   Weekending_array[i] = WeekStarting.ToString("dd") + " " + WeekStarting.ToString("MMM") + " " + WeekStarting.ToString("yyyy");
+                   WeekStarting = WeekStarting.AddDays(7);
+
+               }
+               while (iWeekHeaderCount < NoOfWeeks)
+                 {
+                    string headerName = Weekending_array[iWeekHeaderCount];
+                   dv.RowFilter += "AND [" + headerName + "] > 0";
+                   iWeekHeaderCount++;
+                  }
+
+
+               //  Weekending_array = new string[NoOfWeeks];               
+               //htWeekEndings = new Hashtable(NoOfWeeks);
+
+               // iWeekHeaderCount = 0;
+               //  while (iWeekHeaderCount < NoOfWeeks)
+               //  {
+               //     string headerName = Weekending_array[iWeekHeaderCount];
+               //    dv2.RowFilter += "AND [" + headerName + "] > 0";
+               //    iWeekHeaderCount++;
+               //   }
+               // Dd code for color
+               /*
+
+               Weekending_array = new string[NoOfWeeks];
+
+               htWeekEndings = new Hashtable(NoOfWeeks);
+                iWeekHeaderCount = 0;
+                 while (iWeekHeaderCount < NoOfWeeks)
+                 {
+                    string headerName = Weekending_array[iWeekHeaderCount];
+                   dv.RowFilter += "AND [" + headerName + "] > 0";
+                   iWeekHeaderCount++;
+                  }
+                  */
 
                 RadGrid_weekly.DataSource = dv;
                 RadGrid_weekly.Rebind();
